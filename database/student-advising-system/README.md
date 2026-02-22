@@ -46,52 +46,48 @@ This database component serves as the backend for the student advising system, m
 
 ## Installation
 
-1. **Clone the repository**
+## Step 1. **Clone the repository**
    git clone https://github.com/yourusername/student-advising-database.git
    cd student-advising-system
    
-Step 2: Set Up Virtual Environment
-
-# Create virtual environment
+## Step 2: Set Up Virtual Environment
 python -m venv venv
-
-# Activate it (Windows)
+Activate it (Windows)
 venv\Scripts\activate
 
-Step 3: Install Dependencies
+## Step 3: Install Dependencies
 
 pip install -r requirements.txt
 
-Step 4: Configure Environment Variables
+## Step 4: Configure Environment Variables
 
-# Copy example environment file
+ Copy example environment file
 cp .env.example .env
 
-# Edit .env with your MongoDB Atlas credentials
-# Get your connection string from Atlas: Database > Connect > Connect your application
+ Edit .env with your MongoDB Atlas credentials
+Get your connection string from Atlas: Database > Connect > Connect your application
 
 .env file structure:
-
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/Student_Advising_System?retryWrites=true&w=majority
 FLASK_APP=app.py
 FLASK_ENV=development
 SECRET_KEY=your-secret-key-here
 PORT=5000
 
-Step 5: Import Data
+## Step 5: Import Data
 
-# Import the sample data
+ Import the sample data
 mongoimport --uri YOUR_ATLAS_URI --collection students --file students.json --jsonArray
 mongoimport --uri YOUR_ATLAS_URI --collection advisors --file advisors.json --jsonArray
 
-Step 6: Run the Application
+## Step 6: Run the Application
 
 python app.py
 
 The server will start at http://localhost:5000   
 
 
-MongoDB Atlas Setup
+# MongoDB Atlas Setup
 
     Create a cluster at MongoDB Atlas
 

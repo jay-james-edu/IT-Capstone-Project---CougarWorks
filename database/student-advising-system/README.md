@@ -48,6 +48,7 @@ This database component serves as the backend for the student advising system, m
 
 ## Step 1. **Clone the repository**
    git clone https://github.com/yourusername/student-advising-database.git
+  
    cd student-advising-system
    
 ## Step 2: Set Up Virtual Environment
@@ -64,10 +65,14 @@ pip install -r requirements.txt
 ## Step 4: Configure Environment Variables
 
  Copy example environment file
+ 
 cp .env.example .env
 
  Edit .env with your MongoDB Atlas credentials
+ 
 Get your connection string from Atlas: Database > Connect > Connect your application
+
+<img width="1235" height="207" alt="Screenshot 2026-02-22 160715" src="https://github.com/user-attachments/assets/4feff052-9dbb-4abc-b4bd-5510ef95826f" />
 
 .env file structure:
 
@@ -89,6 +94,7 @@ python app.py
 
 The server will start at http://localhost:5000   
 
+<img width="1421" height="517" alt="Screenshot 2026-02-22 160818" src="https://github.com/user-attachments/assets/831f2a0d-ac1d-4fd1-ad13-ec99d2bca41b" />
 
 # MongoDB Atlas Setup
 

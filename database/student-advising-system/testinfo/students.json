@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "699b2a1282517322b1f4e057"
+  },
+  "studentId": "S1001",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john.smith@csu.edu",
+    "phone": "555-0101"
+  },
+  "academicInfo": {
+    "major": "Computer Science",
+    "standing": "Senior",
+    "gpa": 3.7,
+    "creditsEarned": 108,
+    "expectedGraduation": "2026-05-15",
+    "startDate": "2021-08-15"
+  },
+  "advisorId": "A2001",
+  "enrollmentStatus": "Active"
+},
+{
+  "_id": {
+    "$oid": "699b2a1b82517322b1f4e059"
+  },
+  "studentId": "S1002",
+  "personalInfo": {
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "email": "sarah.johnson@csu.edu",
+    "phone": "555-0102"
+  },
+  "academicInfo": {
+    "major": "Computer Science",
+    "standing": "Junior",
+    "gpa": 3.5,
+    "creditsEarned": 80,
+    "expectedGraduation": "2027-05-15",
+    "startDate": "2022-08-15"
+  },
+  "advisorId": "A2001",
+  "enrollmentStatus": "Active"
+},
+{
+  "_id": {
+    "$oid": "699b2a2582517322b1f4e05b"
+  },
+  "studentId": "S1003",
+  "personalInfo": {
+    "firstName": "Michael",
+    "lastName": "Chen",
+    "email": "michael.chen@csu.edu",
+    "phone": "555-0103"
+  },
+  "academicInfo": {
+    "major": "Computer Science",
+    "standing": "Sophomore",
+    "gpa": 3.9,
+    "creditsEarned": 45,
+    "expectedGraduation": "2028-05-15",
+    "startDate": "2023-08-15"
+  },
+  "advisorId": "A2002",
+  "enrollmentStatus": "Active"
+},
+{
+  "_id": {
+    "$oid": "699b2a3182517322b1f4e05d"
+  },
+  "studentId": "S1004",
+  "personalInfo": {
+    "firstName": "Emily",
+    "lastName": "Rodriguez",
+    "email": "emily.rodriguez@csu.edu",
+    "phone": "555-0104"
+  },
+  "academicInfo": {
+    "major": "Computer Science",
+    "standing": "Freshman",
+    "gpa": 3.8,
+    "creditsEarned": 15,
+    "expectedGraduation": "2029-05-15",
+    "startDate": "2024-08-15"
+  },
+  "advisorId": "A2002",
+  "enrollmentStatus": "Active"
+},
+{
+  "_id": {
+    "$oid": "699b2a3b82517322b1f4e05f"
+  },
+  "studentId": "S1005",
+  "personalInfo": {
+    "firstName": "David",
+    "lastName": "Park",
+    "email": "david.park@csu.edu",
+    "phone": "555-0105"
+  },
+  "academicInfo": {
+    "major": "Computer Science",
+    "standing": "Junior",
+    "gpa": 3.6,
+    "creditsEarned": 75,
+    "expectedGraduation": "2027-05-15",
+    "startDate": "2022-08-15"
+  },
+  "advisorId": "A2001",
+  "enrollmentStatus": "Active"
+}]

@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "699b29eb82517322b1f4e051"
+  },
+  "advisorId": "A2001",
+  "personalInfo": {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jsmith@csu.edu",
+    "department": "Computer Science"
+  },
+  "students": [
+    "S1001",
+    "S1002",
+    "S1005"
+  ]
+},
+{
+  "_id": {
+    "$oid": "699b29f082517322b1f4e053"
+  },
+  "advisorId": "A2002",
+  "personalInfo": {
+    "firstName": "Robert",
+    "lastName": "Wilson",
+    "email": "rwilson@csu.edu",
+    "department": "Computer Science"
+  },
+  "students": [
+    "S1003",
+    "S1004"
+  ]
+}]

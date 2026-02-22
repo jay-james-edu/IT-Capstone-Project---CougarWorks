@@ -52,7 +52,9 @@ This database component serves as the backend for the student advising system, m
    
 ## Step 2: Set Up Virtual Environment
 python -m venv venv
-Activate it (Windows)
+
+Activate it
+
 venv\Scripts\activate
 
 ## Step 3: Install Dependencies
@@ -68,6 +70,7 @@ cp .env.example .env
 Get your connection string from Atlas: Database > Connect > Connect your application
 
 .env file structure:
+
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/Student_Advising_System?retryWrites=true&w=majority
 FLASK_APP=app.py
 FLASK_ENV=development

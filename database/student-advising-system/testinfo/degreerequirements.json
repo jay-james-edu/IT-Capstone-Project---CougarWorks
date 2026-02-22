@@ -1,0 +1,573 @@
+[{
+  "_id": {
+    "$oid": "699b29c382517322b1f4e04d"
+  },
+  "degreeName": "BS Computer Science",
+  "totalCredits": 120,
+  "coreIMPACTS": {
+    "name": "Core IMPACTS Curriculum",
+    "totalCredits": 42,
+    "areas": [
+      {
+        "name": "Institutional Priorities",
+        "credits": 3,
+        "courses": [
+          {
+            "code": "PERS 1506",
+            "name": "Perspectives",
+            "credits": 1
+          },
+          {
+            "code": "RIVR 1101",
+            "name": "Taking the Plunge",
+            "credits": 2
+          }
+        ]
+      },
+      {
+        "name": "Mathematics & Quantitative Skills",
+        "credits": 3,
+        "notes": "Choose one: MATH 1113 or higher, or STAT 1401",
+        "courses": [
+          {
+            "code": "DATA 1501",
+            "name": "Introduction to Data Science",
+            "credits": 3
+          },
+          {
+            "code": "MATH 1001",
+            "name": "Quantitative Skills and Reasoning",
+            "credits": 3
+          },
+          {
+            "code": "MATH 1101",
+            "name": "Introduction to Mathematical Modeling",
+            "credits": 3
+          },
+          {
+            "code": "MATH 1111",
+            "name": "College Algebra",
+            "credits": 3
+          },
+          {
+            "code": "MATH 1113",
+            "name": "Pre-Calculus",
+            "credits": 4
+          },
+          {
+            "code": "MATH 1125",
+            "name": "Applied Calculus",
+            "credits": 3
+          },
+          {
+            "code": "MATH 1131",
+            "name": "Calculus with Analytic Geometry I",
+            "credits": 4
+          },
+          {
+            "code": "MATH 1132",
+            "name": "Calculus with Analytic Geometry II",
+            "credits": 4
+          },
+          {
+            "code": "MATH 1165",
+            "name": "Computer-Assisted Problem Solving",
+            "credits": 3
+          },
+          {
+            "code": "MATH 1401",
+            "name": "Introduction to Statistics",
+            "credits": 3
+          },
+          {
+            "code": "MATH 1501",
+            "name": "Calculus I",
+            "credits": 4
+          },
+          {
+            "code": "MATH 2125",
+            "name": "Introduction to Discrete Mathematics",
+            "credits": 3
+          },
+          {
+            "code": "STAT 1401",
+            "name": "Elementary Statistics",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Political Science and U.S. History",
+        "credits": 6,
+        "courses": [
+          {
+            "code": "HIST 2111",
+            "name": "U.S. History to 1865",
+            "credits": 3
+          },
+          {
+            "code": "HIST 2112",
+            "name": "U.S. History since 1865",
+            "credits": 3
+          },
+          {
+            "code": "POLS 1101",
+            "name": "American Government",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Arts, Humanities, and Ethics",
+        "credits": 6,
+        "categories": [
+          {
+            "type": "Fine Arts",
+            "credits": 3,
+            "courses": [
+              {
+                "code": "ARTH 1100",
+                "name": "Art Appreciation",
+                "credits": 3
+              },
+              {
+                "code": "ARTH 2125",
+                "name": "Intro to History of Art I",
+                "credits": 3
+              },
+              {
+                "code": "ARTH 2126",
+                "name": "Intro to History of Art II",
+                "credits": 3
+              },
+              {
+                "code": "MUSC 1100",
+                "name": "Music Appreciation",
+                "credits": 3
+              },
+              {
+                "code": "THEA 1100",
+                "name": "Theatre Appreciation",
+                "credits": 3
+              },
+              {
+                "code": "ITDS 1145",
+                "name": "Comparative Arts",
+                "credits": 3
+              }
+            ]
+          },
+          {
+            "type": "Humanities",
+            "credits": 3,
+            "courses": [
+              {
+                "code": "ENGL 2111",
+                "name": "World Literature I",
+                "credits": 3
+              },
+              {
+                "code": "ENGL 2112",
+                "name": "World Literature II",
+                "credits": 3
+              },
+              {
+                "code": "ITDS 1155",
+                "name": "The Western Intellectual Tradition",
+                "credits": 3
+              },
+              {
+                "code": "ITDS 1774",
+                "name": "Introduction to Digital Humanities",
+                "credits": 3
+              },
+              {
+                "code": "PHIL 2010",
+                "name": "Introduction to Philosophy",
+                "credits": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Communicating in Writing",
+        "credits": 6,
+        "courses": [
+          {
+            "code": "ENGL 1101",
+            "name": "English Composition I",
+            "credits": 3
+          },
+          {
+            "code": "ENGL 1102",
+            "name": "English Composition II",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Technology, Mathematics, and Sciences",
+        "credits": 11,
+        "notes": "CPSC 1301K and CPSC 1302K count toward this area",
+        "courses": [
+          {
+            "code": "CPSC 1301K",
+            "name": "Computer Science I",
+            "credits": 4
+          },
+          {
+            "code": "CPSC 1302K",
+            "name": "Computer Science II",
+            "credits": 4
+          },
+          {
+            "code": "ANTH 1145",
+            "name": "Human Origins",
+            "credits": 3
+          },
+          {
+            "code": "ASTR 1105",
+            "name": "Descriptive Astronomy: Solar System",
+            "credits": 3
+          },
+          {
+            "code": "ASTR 1106",
+            "name": "Descriptive Astronomy: Stars/Galaxies",
+            "credits": 3
+          },
+          {
+            "code": "ASTR 1305",
+            "name": "Descriptive Astronomy Lab",
+            "credits": 1
+          },
+          {
+            "code": "ATSC 1112",
+            "name": "Understanding the Weather",
+            "credits": 3
+          },
+          {
+            "code": "ATSC 1112L",
+            "name": "Understanding the Weather Lab",
+            "credits": 1
+          },
+          {
+            "code": "BIOL 1125",
+            "name": "Contemporary Issues in Biology",
+            "credits": 3
+          },
+          {
+            "code": "BIOL 1215K",
+            "name": "Introductory Biology",
+            "credits": 4
+          },
+          {
+            "code": "BIOL 1225K",
+            "name": "Contemporary Issues in Biology with Lab",
+            "credits": 4
+          },
+          {
+            "code": "CHEM 1151",
+            "name": "Survey of Chemistry I",
+            "credits": 4
+          },
+          {
+            "code": "CHEM 1152",
+            "name": "Survey of Chemistry II",
+            "credits": 4
+          },
+          {
+            "code": "CHEM 1211",
+            "name": "Principles of Chemistry I",
+            "credits": 4
+          },
+          {
+            "code": "CHEM 1212",
+            "name": "Principles of Chemistry II",
+            "credits": 4
+          },
+          {
+            "code": "ENVS 1105",
+            "name": "Environmental Studies",
+            "credits": 3
+          },
+          {
+            "code": "ENVS 1105L",
+            "name": "Environmental Studies Lab",
+            "credits": 1
+          },
+          {
+            "code": "ENVS 1205K",
+            "name": "Sustainability and the Environment",
+            "credits": 4
+          },
+          {
+            "code": "GEOG 2215",
+            "name": "Intro to GIS",
+            "credits": 3
+          },
+          {
+            "code": "GEOL 1110",
+            "name": "Natural Disasters",
+            "credits": 3
+          },
+          {
+            "code": "GEOL 1121",
+            "name": "Intro Geoscience I: Physical Geology",
+            "credits": 3
+          },
+          {
+            "code": "GEOL 1121L",
+            "name": "Physical Geology Lab",
+            "credits": 1
+          },
+          {
+            "code": "GEOL 1122",
+            "name": "Historical Geology",
+            "credits": 3
+          },
+          {
+            "code": "GEOL 1322",
+            "name": "Historical Geology Lab",
+            "credits": 1
+          },
+          {
+            "code": "GEOL 2225",
+            "name": "The Fossil Record",
+            "credits": 4
+          },
+          {
+            "code": "PHYS 1111",
+            "name": "Introductory Physics I",
+            "credits": 4
+          },
+          {
+            "code": "PHYS 1112",
+            "name": "Introductory Physics II",
+            "credits": 4
+          },
+          {
+            "code": "PHYS 1125",
+            "name": "Physics of Color and Sound",
+            "credits": 3
+          },
+          {
+            "code": "PHYS 1325",
+            "name": "Physics of Color and Sound Lab",
+            "credits": 1
+          },
+          {
+            "code": "PHYS 2211",
+            "name": "Principles of Physics I",
+            "credits": 4
+          },
+          {
+            "code": "PHYS 2212",
+            "name": "Principles of Physics II",
+            "credits": 4
+          }
+        ]
+      },
+      {
+        "name": "Social Sciences",
+        "credits": 3,
+        "courses": [
+          {
+            "code": "ECON 2105",
+            "name": "Principles of Macroeconomics",
+            "credits": 3
+          },
+          {
+            "code": "ECON 2106",
+            "name": "Principles of Microeconomics",
+            "credits": 3
+          },
+          {
+            "code": "PHIL 2030",
+            "name": "Moral Philosophy",
+            "credits": 3
+          },
+          {
+            "code": "PSYC 1101",
+            "name": "Intro to General Psychology",
+            "credits": 3
+          },
+          {
+            "code": "SOCI 1101",
+            "name": "Introduction to Sociology",
+            "credits": 3
+          },
+          {
+            "code": "ANTH 1107",
+            "name": "Discovering Archaeology",
+            "credits": 3
+          },
+          {
+            "code": "ANTH 1105",
+            "name": "Cultural Anthropology",
+            "credits": 3
+          },
+          {
+            "code": "ANTH 2105",
+            "name": "Ancient World Civilizations",
+            "credits": 3
+          },
+          {
+            "code": "ANTH 2136",
+            "name": "Language and Culture",
+            "credits": 3
+          },
+          {
+            "code": "ENGL 2136",
+            "name": "Language and Culture",
+            "credits": 3
+          },
+          {
+            "code": "GEOG 1101",
+            "name": "Introduction to Human Geography",
+            "credits": 3
+          },
+          {
+            "code": "HIST 1111",
+            "name": "World History to 1500",
+            "credits": 3
+          },
+          {
+            "code": "HIST 1112",
+            "name": "World History since 1500",
+            "credits": 3
+          },
+          {
+            "code": "ITDS 1156",
+            "name": "Understanding Non-Western Cultures",
+            "credits": 3
+          }
+        ]
+      }
+    ]
+  },
+  "fieldOfStudy": {
+    "name": "Field of Study Requirements",
+    "totalCredits": 18,
+    "notes": "Minimum grade of C required in each course",
+    "courses": [
+      {
+        "code": "CPSC 1301K",
+        "name": "Computer Science I",
+        "credits": 4
+      },
+      {
+        "code": "CPSC 1302K",
+        "name": "Computer Science II",
+        "credits": 4
+      },
+      {
+        "code": "CPSC 2105",
+        "name": "Computer Organization",
+        "credits": 3
+      },
+      {
+        "code": "CYBR 2159",
+        "name": "Fundamentals of Computer Networks",
+        "credits": 3
+      },
+      {
+        "code": "CYBR 2160",
+        "name": "Intro to Information Security",
+        "credits": 3
+      },
+      {
+        "code": "MATH 2125",
+        "name": "Introduction to Discrete Mathematics",
+        "credits": 3
+      }
+    ]
+  },
+  "requiredForMajor": {
+    "name": "Required for the Major",
+    "totalCredits": 20,
+    "notes": "Minimum grade of C required in each CPSC course",
+    "courses": [
+      {
+        "code": "CPSC 2108",
+        "name": "Data Structures",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 3125",
+        "name": "Operating Systems",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 3131",
+        "name": "Database Systems I",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 3165",
+        "name": "Professionalism in Computing",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 3175",
+        "name": "Object-Oriented Design",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4000",
+        "name": "Baccalaureate Survey",
+        "credits": 1
+      },
+      {
+        "code": "MATH 5125U",
+        "name": "Discrete Mathematics",
+        "credits": 3
+      }
+    ]
+  },
+  "majorElectives": {
+    "name": "Major Electives",
+    "totalRequired": 30,
+    "notes": "Minimum grade of C required in each course",
+    "core": [
+      {
+        "code": "CPSC 4115",
+        "name": "Algorithms",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4148",
+        "name": "Theory of Computation",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4155",
+        "name": "Computer Architecture",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4157",
+        "name": "Computer Networks",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4175",
+        "name": "Software Engineering",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4176",
+        "name": "Senior Software Engineering Project",
+        "credits": 3
+      }
+    ],
+    "electives": {
+      "credits": 12,
+      "level": "3000+ CPSC/CYBR"
+    }
+  },
+  "generalElectives": {
+    "name": "General Electives",
+    "credits": 10
+  }
+}]

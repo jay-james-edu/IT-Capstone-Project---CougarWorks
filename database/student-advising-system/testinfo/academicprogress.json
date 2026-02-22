@@ -1,0 +1,1281 @@
+[{
+  "_id": {
+    "$oid": "699b2b0082517322b1f4e062"
+  },
+  "studentId": "S1001",
+  "catalogYear": "2021-2022",
+  "currentSemester": "Spring 2026",
+  "degreeProgress": {
+    "coreIMPACTS": {
+      "totalRequired": 42,
+      "completed": 42,
+      "areas": [
+        {
+          "name": "Institutional Priorities",
+          "completed": true,
+          "courses": [
+            {
+              "code": "PERS 1506",
+              "name": "Perspectives",
+              "credits": 1,
+              "grade": "A",
+              "semester": "Fall 2021"
+            },
+            {
+              "code": "RIVR 1101",
+              "name": "Taking the Plunge",
+              "credits": 2,
+              "grade": "A-",
+              "semester": "Fall 2021"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics & Quantitative Skills",
+          "completed": true,
+          "courses": [
+            {
+              "code": "MATH 1113",
+              "name": "Pre-Calculus",
+              "credits": 4,
+              "grade": "A",
+              "semester": "Fall 2021"
+            }
+          ]
+        },
+        {
+          "name": "Political Science and U.S. History",
+          "completed": true,
+          "courses": [
+            {
+              "code": "HIST 2111",
+              "name": "U.S. History to 1865",
+              "credits": 3,
+              "grade": "B+",
+              "semester": "Spring 2022"
+            },
+            {
+              "code": "POLS 1101",
+              "name": "American Government",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Fall 2022"
+            }
+          ]
+        },
+        {
+          "name": "Arts, Humanities, and Ethics",
+          "completed": true,
+          "courses": [
+            {
+              "code": "MUSC 1100",
+              "name": "Music Appreciation",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Fall 2021"
+            },
+            {
+              "code": "PHIL 2010",
+              "name": "Introduction to Philosophy",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Spring 2022"
+            }
+          ]
+        },
+        {
+          "name": "Communicating in Writing",
+          "completed": true,
+          "courses": [
+            {
+              "code": "ENGL 1101",
+              "name": "English Composition I",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Fall 2021"
+            },
+            {
+              "code": "ENGL 1102",
+              "name": "English Composition II",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Spring 2022"
+            }
+          ]
+        },
+        {
+          "name": "Technology, Mathematics, and Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "CPSC 1301K",
+              "name": "Computer Science I",
+              "credits": 4,
+              "grade": "A-",
+              "semester": "Fall 2021"
+            },
+            {
+              "code": "CPSC 1302K",
+              "name": "Computer Science II",
+              "credits": 4,
+              "grade": "B+",
+              "semester": "Spring 2022"
+            },
+            {
+              "code": "PHYS 1111",
+              "name": "Introductory Physics I",
+              "credits": 4,
+              "grade": "B",
+              "semester": "Fall 2022"
+            }
+          ]
+        },
+        {
+          "name": "Social Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "PSYC 1101",
+              "name": "Intro to General Psychology",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Spring 2023"
+            }
+          ]
+        }
+      ]
+    },
+    "fieldOfStudy": {
+      "totalRequired": 18,
+      "completed": 18,
+      "courses": [
+        {
+          "code": "CPSC 1301K",
+          "name": "Computer Science I",
+          "credits": 4,
+          "grade": "A-",
+          "semester": "Fall 2021"
+        },
+        {
+          "code": "CPSC 1302K",
+          "name": "Computer Science II",
+          "credits": 4,
+          "grade": "B+",
+          "semester": "Spring 2022"
+        },
+        {
+          "code": "CPSC 2105",
+          "name": "Computer Organization",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Fall 2022"
+        },
+        {
+          "code": "CYBR 2159",
+          "name": "Fundamentals of Computer Networks",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Spring 2023"
+        },
+        {
+          "code": "CYBR 2160",
+          "name": "Intro to Information Security",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "MATH 2125",
+          "name": "Introduction to Discrete Mathematics",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Spring 2022"
+        }
+      ]
+    },
+    "requiredForMajor": {
+      "totalRequired": 20,
+      "completed": 17,
+      "courses": [
+        {
+          "code": "CPSC 2108",
+          "name": "Data Structures",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2022"
+        },
+        {
+          "code": "CPSC 3125",
+          "name": "Operating Systems",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2023"
+        },
+        {
+          "code": "CPSC 3131",
+          "name": "Database Systems I",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "CPSC 3165",
+          "name": "Professionalism in Computing",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Spring 2024"
+        },
+        {
+          "code": "CPSC 3175",
+          "name": "Object-Oriented Design",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "CPSC 4000",
+          "name": "Baccalaureate Survey",
+          "credits": 1,
+          "grade": "In Progress",
+          "semester": "Spring 2026"
+        },
+        {
+          "code": "MATH 5125U",
+          "name": "Discrete Mathematics",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2025"
+        }
+      ]
+    },
+    "majorElectives": {
+      "totalRequired": 30,
+      "completed": 24,
+      "courses": [
+        {
+          "code": "CPSC 4115",
+          "name": "Algorithms",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "CPSC 4148",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2024"
+        },
+        {
+          "code": "CPSC 4155",
+          "name": "Computer Architecture",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "CPSC 4157",
+          "name": "Computer Networks",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Spring 2025"
+        },
+        {
+          "code": "CPSC 4175",
+          "name": "Software Engineering",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Fall 2025"
+        },
+        {
+          "code": "CPSC 4176",
+          "name": "Senior Software Engineering Project",
+          "credits": 3,
+          "grade": "In Progress",
+          "semester": "Spring 2026"
+        },
+        {
+          "code": "CYBR 3100",
+          "name": "Network Security",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Spring 2025"
+        },
+        {
+          "code": "CPSC 4100",
+          "name": "Mobile App Development",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2025"
+        }
+      ]
+    },
+    "generalElectives": {
+      "totalRequired": 10,
+      "completed": 7,
+      "courses": [
+        {
+          "code": "SPAN 1001",
+          "name": "Elementary Spanish I",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Spring 2023"
+        },
+        {
+          "code": "SPAN 1002",
+          "name": "Elementary Spanish II",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "COMM 1110",
+          "name": "Public Speaking",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Spring 2024"
+        }
+      ]
+    },
+    "totalCreditsEarned": 108,
+    "remainingCredits": 12,
+    "currentSemesterCourses": [
+      {
+        "code": "CPSC 4176",
+        "name": "Senior Software Engineering Project",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4000",
+        "name": "Baccalaureate Survey",
+        "credits": 1
+      },
+      {
+        "code": "CPSC 4890",
+        "name": "Advanced Topics in Computing",
+        "credits": 3
+      },
+      {
+        "code": "MATH 3100",
+        "name": "Linear Algebra",
+        "credits": 3
+      }
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "699b2b1e82517322b1f4e064"
+  },
+  "studentId": "S1002",
+  "catalogYear": "2022-2023",
+  "currentSemester": "Spring 2026",
+  "degreeProgress": {
+    "coreIMPACTS": {
+      "totalRequired": 42,
+      "completed": 42,
+      "areas": [
+        {
+          "name": "Institutional Priorities",
+          "completed": true,
+          "courses": [
+            {
+              "code": "PERS 1506",
+              "name": "Perspectives",
+              "credits": 1,
+              "grade": "A",
+              "semester": "Fall 2022"
+            },
+            {
+              "code": "RIVR 1101",
+              "name": "Taking the Plunge",
+              "credits": 2,
+              "grade": "A",
+              "semester": "Fall 2022"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics & Quantitative Skills",
+          "completed": true,
+          "courses": [
+            {
+              "code": "MATH 1113",
+              "name": "Pre-Calculus",
+              "credits": 4,
+              "grade": "A-",
+              "semester": "Fall 2022"
+            }
+          ]
+        },
+        {
+          "name": "Political Science and U.S. History",
+          "completed": true,
+          "courses": [
+            {
+              "code": "HIST 2112",
+              "name": "U.S. History since 1865",
+              "credits": 3,
+              "grade": "B+",
+              "semester": "Spring 2023"
+            },
+            {
+              "code": "POLS 1101",
+              "name": "American Government",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Arts, Humanities, and Ethics",
+          "completed": true,
+          "courses": [
+            {
+              "code": "ARTH 1100",
+              "name": "Art Appreciation",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Spring 2023"
+            },
+            {
+              "code": "ENGL 2111",
+              "name": "World Literature I",
+              "credits": 3,
+              "grade": "B+",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Communicating in Writing",
+          "completed": true,
+          "courses": [
+            {
+              "code": "ENGL 1101",
+              "name": "English Composition I",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Fall 2022"
+            },
+            {
+              "code": "ENGL 1102",
+              "name": "English Composition II",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Spring 2023"
+            }
+          ]
+        },
+        {
+          "name": "Technology, Mathematics, and Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "CPSC 1301K",
+              "name": "Computer Science I",
+              "credits": 4,
+              "grade": "B+",
+              "semester": "Fall 2022"
+            },
+            {
+              "code": "CPSC 1302K",
+              "name": "Computer Science II",
+              "credits": 4,
+              "grade": "A-",
+              "semester": "Spring 2023"
+            },
+            {
+              "code": "CHEM 1151",
+              "name": "Survey of Chemistry I",
+              "credits": 4,
+              "grade": "B",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Social Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "ECON 2105",
+              "name": "Principles of Macroeconomics",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Spring 2024"
+            }
+          ]
+        }
+      ]
+    },
+    "fieldOfStudy": {
+      "totalRequired": 18,
+      "completed": 18,
+      "courses": [
+        {
+          "code": "CPSC 1301K",
+          "name": "Computer Science I",
+          "credits": 4,
+          "grade": "B+",
+          "semester": "Fall 2022"
+        },
+        {
+          "code": "CPSC 1302K",
+          "name": "Computer Science II",
+          "credits": 4,
+          "grade": "A-",
+          "semester": "Spring 2023"
+        },
+        {
+          "code": "CPSC 2105",
+          "name": "Computer Organization",
+          "credits": 3,
+          "grade": "B",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "CYBR 2159",
+          "name": "Fundamentals of Computer Networks",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2024"
+        },
+        {
+          "code": "CYBR 2160",
+          "name": "Intro to Information Security",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "MATH 2125",
+          "name": "Introduction to Discrete Mathematics",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2023"
+        }
+      ]
+    },
+    "requiredForMajor": {
+      "totalRequired": 20,
+      "completed": 14,
+      "courses": [
+        {
+          "code": "CPSC 2108",
+          "name": "Data Structures",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "CPSC 3125",
+          "name": "Operating Systems",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2024"
+        },
+        {
+          "code": "CPSC 3131",
+          "name": "Database Systems I",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "CPSC 3165",
+          "name": "Professionalism in Computing",
+          "credits": 3,
+          "grade": "In Progress",
+          "semester": "Spring 2026"
+        },
+        {
+          "code": "CPSC 3175",
+          "name": "Object-Oriented Design",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Spring 2025"
+        },
+        {
+          "code": "MATH 5125U",
+          "name": "Discrete Mathematics",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Fall 2025"
+        }
+      ]
+    },
+    "majorElectives": {
+      "totalRequired": 30,
+      "completed": 6,
+      "courses": [
+        {
+          "code": "CPSC 4115",
+          "name": "Algorithms",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "CPSC 4155",
+          "name": "Computer Architecture",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2025"
+        }
+      ]
+    },
+    "generalElectives": {
+      "totalRequired": 10,
+      "completed": 0,
+      "courses": []
+    },
+    "totalCreditsEarned": 80,
+    "remainingCredits": 40,
+    "currentSemesterCourses": [
+      {
+        "code": "CPSC 3165",
+        "name": "Professionalism in Computing",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4148",
+        "name": "Theory of Computation",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4175",
+        "name": "Software Engineering",
+        "credits": 3
+      },
+      {
+        "code": "MATH 3100",
+        "name": "Linear Algebra",
+        "credits": 3
+      }
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "699b2b3982517322b1f4e066"
+  },
+  "studentId": "S1003",
+  "catalogYear": "2023-2024",
+  "currentSemester": "Spring 2026",
+  "degreeProgress": {
+    "coreIMPACTS": {
+      "totalRequired": 42,
+      "completed": 30,
+      "areas": [
+        {
+          "name": "Institutional Priorities",
+          "completed": true,
+          "courses": [
+            {
+              "code": "PERS 1506",
+              "name": "Perspectives",
+              "credits": 1,
+              "grade": "A",
+              "semester": "Fall 2023"
+            },
+            {
+              "code": "RIVR 1101",
+              "name": "Taking the Plunge",
+              "credits": 2,
+              "grade": "A",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics & Quantitative Skills",
+          "completed": true,
+          "courses": [
+            {
+              "code": "MATH 1113",
+              "name": "Pre-Calculus",
+              "credits": 4,
+              "grade": "A",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Communicating in Writing",
+          "completed": true,
+          "courses": [
+            {
+              "code": "ENGL 1101",
+              "name": "English Composition I",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Fall 2023"
+            },
+            {
+              "code": "ENGL 1102",
+              "name": "English Composition II",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Spring 2024"
+            }
+          ]
+        },
+        {
+          "name": "Technology, Mathematics, and Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "CPSC 1301K",
+              "name": "Computer Science I",
+              "credits": 4,
+              "grade": "A+",
+              "semester": "Fall 2023"
+            },
+            {
+              "code": "CPSC 1302K",
+              "name": "Computer Science II",
+              "credits": 4,
+              "grade": "A",
+              "semester": "Spring 2024"
+            },
+            {
+              "code": "PHYS 1111",
+              "name": "Introductory Physics I",
+              "credits": 4,
+              "grade": "A-",
+              "semester": "Fall 2024"
+            }
+          ]
+        }
+      ]
+    },
+    "fieldOfStudy": {
+      "totalRequired": 18,
+      "completed": 15,
+      "courses": [
+        {
+          "code": "CPSC 1301K",
+          "name": "Computer Science I",
+          "credits": 4,
+          "grade": "A+",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "CPSC 1302K",
+          "name": "Computer Science II",
+          "credits": 4,
+          "grade": "A",
+          "semester": "Spring 2024"
+        },
+        {
+          "code": "CPSC 2105",
+          "name": "Computer Organization",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "MATH 2125",
+          "name": "Introduction to Discrete Mathematics",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Spring 2024"
+        }
+      ]
+    },
+    "requiredForMajor": {
+      "totalRequired": 20,
+      "completed": 6,
+      "courses": [
+        {
+          "code": "CPSC 2108",
+          "name": "Data Structures",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Spring 2025"
+        },
+        {
+          "code": "CPSC 3175",
+          "name": "Object-Oriented Design",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2025"
+        }
+      ]
+    },
+    "majorElectives": {
+      "totalRequired": 30,
+      "completed": 0,
+      "courses": []
+    },
+    "generalElectives": {
+      "totalRequired": 10,
+      "completed": 0,
+      "courses": []
+    },
+    "totalCreditsEarned": 45,
+    "remainingCredits": 75,
+    "currentSemesterCourses": [
+      {
+        "code": "CYBR 2159",
+        "name": "Fundamentals of Computer Networks",
+        "credits": 3
+      },
+      {
+        "code": "CYBR 2160",
+        "name": "Intro to Information Security",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 3125",
+        "name": "Operating Systems",
+        "credits": 3
+      },
+      {
+        "code": "MATH 5125U",
+        "name": "Discrete Mathematics",
+        "credits": 3
+      }
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "699b2b4282517322b1f4e068"
+  },
+  "studentId": "S1004",
+  "catalogYear": "2024-2025",
+  "currentSemester": "Spring 2026",
+  "degreeProgress": {
+    "coreIMPACTS": {
+      "totalRequired": 42,
+      "completed": 15,
+      "areas": [
+        {
+          "name": "Institutional Priorities",
+          "completed": true,
+          "courses": [
+            {
+              "code": "PERS 1506",
+              "name": "Perspectives",
+              "credits": 1,
+              "grade": "A",
+              "semester": "Fall 2024"
+            },
+            {
+              "code": "RIVR 1101",
+              "name": "Taking the Plunge",
+              "credits": 2,
+              "grade": "A-",
+              "semester": "Fall 2024"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics & Quantitative Skills",
+          "completed": true,
+          "courses": [
+            {
+              "code": "MATH 1113",
+              "name": "Pre-Calculus",
+              "credits": 4,
+              "grade": "A",
+              "semester": "Fall 2024"
+            }
+          ]
+        },
+        {
+          "name": "Communicating in Writing",
+          "completed": true,
+          "courses": [
+            {
+              "code": "ENGL 1101",
+              "name": "English Composition I",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Fall 2024"
+            }
+          ]
+        },
+        {
+          "name": "Technology, Mathematics, and Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "CPSC 1301K",
+              "name": "Computer Science I",
+              "credits": 4,
+              "grade": "A",
+              "semester": "Fall 2024"
+            }
+          ]
+        }
+      ]
+    },
+    "fieldOfStudy": {
+      "totalRequired": 18,
+      "completed": 4,
+      "courses": [
+        {
+          "code": "CPSC 1301K",
+          "name": "Computer Science I",
+          "credits": 4,
+          "grade": "A",
+          "semester": "Fall 2024"
+        }
+      ]
+    },
+    "requiredForMajor": {
+      "totalRequired": 20,
+      "completed": 0,
+      "courses": []
+    },
+    "majorElectives": {
+      "totalRequired": 30,
+      "completed": 0,
+      "courses": []
+    },
+    "generalElectives": {
+      "totalRequired": 10,
+      "completed": 0,
+      "courses": []
+    },
+    "totalCreditsEarned": 15,
+    "remainingCredits": 105,
+    "currentSemesterCourses": [
+      {
+        "code": "ENGL 1102",
+        "name": "English Composition II",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 1302K",
+        "name": "Computer Science II",
+        "credits": 4
+      },
+      {
+        "code": "MATH 2125",
+        "name": "Introduction to Discrete Mathematics",
+        "credits": 3
+      }
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "699b2b5d82517322b1f4e06a"
+  },
+  "studentId": "S1005",
+  "catalogYear": "2022-2023",
+  "currentSemester": "Spring 2026",
+  "degreeProgress": {
+    "coreIMPACTS": {
+      "totalRequired": 42,
+      "completed": 42,
+      "areas": [
+        {
+          "name": "Institutional Priorities",
+          "completed": true,
+          "courses": [
+            {
+              "code": "PERS 1506",
+              "name": "Perspectives",
+              "credits": 1,
+              "grade": "A-",
+              "semester": "Fall 2022"
+            },
+            {
+              "code": "RIVR 1101",
+              "name": "Taking the Plunge",
+              "credits": 2,
+              "grade": "A",
+              "semester": "Fall 2022"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics & Quantitative Skills",
+          "completed": true,
+          "courses": [
+            {
+              "code": "MATH 1113",
+              "name": "Pre-Calculus",
+              "credits": 4,
+              "grade": "B+",
+              "semester": "Fall 2022"
+            }
+          ]
+        },
+        {
+          "name": "Political Science and U.S. History",
+          "completed": true,
+          "courses": [
+            {
+              "code": "HIST 2111",
+              "name": "U.S. History to 1865",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Spring 2023"
+            },
+            {
+              "code": "POLS 1101",
+              "name": "American Government",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Arts, Humanities, and Ethics",
+          "completed": true,
+          "courses": [
+            {
+              "code": "THEA 1100",
+              "name": "Theatre Appreciation",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Spring 2023"
+            },
+            {
+              "code": "PHIL 2010",
+              "name": "Introduction to Philosophy",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Communicating in Writing",
+          "completed": true,
+          "courses": [
+            {
+              "code": "ENGL 1101",
+              "name": "English Composition I",
+              "credits": 3,
+              "grade": "B+",
+              "semester": "Fall 2022"
+            },
+            {
+              "code": "ENGL 1102",
+              "name": "English Composition II",
+              "credits": 3,
+              "grade": "A-",
+              "semester": "Spring 2023"
+            }
+          ]
+        },
+        {
+          "name": "Technology, Mathematics, and Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "CPSC 1301K",
+              "name": "Computer Science I",
+              "credits": 4,
+              "grade": "B+",
+              "semester": "Fall 2022"
+            },
+            {
+              "code": "CPSC 1302K",
+              "name": "Computer Science II",
+              "credits": 4,
+              "grade": "A-",
+              "semester": "Spring 2023"
+            },
+            {
+              "code": "PHYS 1111",
+              "name": "Introductory Physics I",
+              "credits": 4,
+              "grade": "B",
+              "semester": "Fall 2023"
+            }
+          ]
+        },
+        {
+          "name": "Social Sciences",
+          "completed": true,
+          "courses": [
+            {
+              "code": "SOCI 1101",
+              "name": "Introduction to Sociology",
+              "credits": 3,
+              "grade": "A",
+              "semester": "Spring 2024"
+            }
+          ]
+        }
+      ]
+    },
+    "fieldOfStudy": {
+      "totalRequired": 18,
+      "completed": 18,
+      "courses": [
+        {
+          "code": "CPSC 1301K",
+          "name": "Computer Science I",
+          "credits": 4,
+          "grade": "B+",
+          "semester": "Fall 2022"
+        },
+        {
+          "code": "CPSC 1302K",
+          "name": "Computer Science II",
+          "credits": 4,
+          "grade": "A-",
+          "semester": "Spring 2023"
+        },
+        {
+          "code": "CPSC 2105",
+          "name": "Computer Organization",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "CYBR 2159",
+          "name": "Fundamentals of Computer Networks",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Spring 2024"
+        },
+        {
+          "code": "CYBR 2160",
+          "name": "Intro to Information Security",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "MATH 2125",
+          "name": "Introduction to Discrete Mathematics",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2023"
+        }
+      ]
+    },
+    "requiredForMajor": {
+      "totalRequired": 20,
+      "completed": 14,
+      "courses": [
+        {
+          "code": "CPSC 2108",
+          "name": "Data Structures",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "CPSC 3125",
+          "name": "Operating Systems",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2024"
+        },
+        {
+          "code": "CPSC 3131",
+          "name": "Database Systems I",
+          "credits": 3,
+          "grade": "A",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "CPSC 3165",
+          "name": "Professionalism in Computing",
+          "credits": 3,
+          "grade": "In Progress",
+          "semester": "Spring 2026"
+        },
+        {
+          "code": "CPSC 3175",
+          "name": "Object-Oriented Design",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Spring 2025"
+        },
+        {
+          "code": "MATH 5125U",
+          "name": "Discrete Mathematics",
+          "credits": 3,
+          "grade": "In Progress",
+          "semester": "Spring 2026"
+        }
+      ]
+    },
+    "majorElectives": {
+      "totalRequired": 30,
+      "completed": 9,
+      "courses": [
+        {
+          "code": "CPSC 4115",
+          "name": "Algorithms",
+          "credits": 3,
+          "grade": "A-",
+          "semester": "Fall 2024"
+        },
+        {
+          "code": "CPSC 4155",
+          "name": "Computer Architecture",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2025"
+        },
+        {
+          "code": "CPSC 4157",
+          "name": "Computer Networks",
+          "credits": 3,
+          "grade": "In Progress",
+          "semester": "Spring 2026"
+        }
+      ]
+    },
+    "generalElectives": {
+      "totalRequired": 10,
+      "completed": 3,
+      "courses": [
+        {
+          "code": "KINS 1106",
+          "name": "Lifetime Fitness",
+          "credits": 1,
+          "grade": "A",
+          "semester": "Fall 2023"
+        },
+        {
+          "code": "PSYC 2103",
+          "name": "Human Development",
+          "credits": 3,
+          "grade": "B+",
+          "semester": "Spring 2024"
+        }
+      ]
+    },
+    "totalCreditsEarned": 86,
+    "remainingCredits": 34,
+    "currentSemesterCourses": [
+      {
+        "code": "CPSC 3165",
+        "name": "Professionalism in Computing",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4157",
+        "name": "Computer Networks",
+        "credits": 3
+      },
+      {
+        "code": "CPSC 4148",
+        "name": "Theory of Computation",
+        "credits": 3
+      },
+      {
+        "code": "MATH 5125U",
+        "name": "Discrete Mathematics",
+        "credits": 3
+      }
+    ]
+  }
+}]

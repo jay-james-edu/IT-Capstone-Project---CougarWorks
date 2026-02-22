@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSU Student Advising System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> CSU Student Advising System 
+            </h1>
+            <p class="subtitle">Computer Science Degree Tracker</p>
+            <div class="connection-status" id="connectionStatus">
+                <span class="status-indicator"></span>
+                Checking connection...
+            </div>
+        </header>
+
+        <!-- Department Overview -->
+        <section class="dashboard-section">
+            <h2>📊 Department Overview</h2>
+            <div class="stats-grid" id="departmentStats">
+                <div class="stat-card loading">Loading statistics...</div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('students')">📋 Students</button>
+            <button class="tab-button" onclick="switchTab('advisors')">👥 Advisors</button>
+            <button class="tab-button" onclick="switchTab('progress')">📈 Academic Progress</button>
+        </div>
+
+        <!-- Students Tab -->
+        <div id="studentsTab" class="tab-content active">
+            <div class="search-bar">
+                <input type="text" id="studentSearch" placeholder="Search students by name, ID, or email..." onkeyup="searchStudents()">
+                <select id="standingFilter" onchange="filterStudents()">
+                    <option value="">All Standings</option>
+                    <option value="Freshman">Freshman</option>
+                    <option value="Sophomore">Sophomore</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+            </div>
+            <div class="student-grid" id="studentGrid">
+                <div class="loading">Loading students...</div>
+            </div>
+        </div>
+
+        <!-- Advisors Tab -->
+        <div id="advisorsTab" class="tab-content">
+            <div class="advisor-grid" id="advisorGrid">
+                <div class="loading">Loading advisors...</div>
+            </div>
+        </div>
+
+        <!-- Progress Tab -->
+        <div id="progressTab" class="tab-content">
+            <div class="progress-list" id="progressList">
+                <div class="loading">Loading academic progress...</div>
+            </div>
+        </div>
+
+        <!-- Student Detail Modal -->
+        <div id="studentModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modalContent">Loading student details...</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer with tech stack info -->
+    <div style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9em;">
+        <p>Built with Python + Flask + MongoDB Atlas</p>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

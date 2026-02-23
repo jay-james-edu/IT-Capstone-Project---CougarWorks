@@ -47,8 +47,12 @@ This database component serves as the backend for the student advising system, m
 ## Installation
 
 ## Step 1. **Clone the repository**
-   git clone https://github.com/yourusername/student-advising-database.git
-  
+   git clone https://github.com/jay-james-edu/IT-Capstone-Project---CougarWorks.git
+
+   cd IT-Capstone-Project---CougarWorks
+
+   cd database
+
    cd student-advising-system
    
 ## Step 2: Set Up Virtual Environment

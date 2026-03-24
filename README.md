@@ -1,6 +1,6 @@
-# An "Easier" Degreeworks
+# CougarsWorks
 
-A web application for students and advisors to track degree progress, built with Python and Django.
+A web application for students and advisors to track degree progress, built with Python.
 
 ## Features
 

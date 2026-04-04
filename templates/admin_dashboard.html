@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks Admin</h2>
+            <a href="{{ url_for('system.admin') }}">Portal</a>
+            <a href="{{ url_for('system.admin_dashboard') }}" class="active">Dashboard</a>
+            <a href="{{ url_for('system.search_students') }}">Manage Students</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>System Overview</h1>
+                <p>Real-time data from database</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <h2 id="stat-count" style="color: #2563eb; font-size: 32px;">0</h2>
+                </div>
+                <div class="card">
+                    <h3>Average GPA</h3>
+                    <h2 id="stat-gpa" style="color: #2563eb; font-size: 32px;">0.0</h2>
+                </div>
+            </div>
+
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Major</th>
+                            <th>GPA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadAdminStats() {
+            try {
+                const res = await fetch('/api/students');
+                if (!res.ok) {
+                    console.error("API Error: Could not fetch students");
+                    return;
+                }
+                const students = await res.json();
+
+                document.getElementById('stat-count').innerText = students.length;
+
+                const totalGpa = students.reduce((acc, s) => acc + (s.academicInfo?.gpa || 0), 0);
+                document.getElementById('stat-gpa').innerText = students.length ? (totalGpa / students.length).toFixed(2) : 0;
+
+                const tbody = document.getElementById('student-table');
+                if(students.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="4">No students found in database.</td></tr>';
+                } else {
+                    tbody.innerHTML = students.map(s => `
+                     <tr>
+                            <td>${s.studentId}</td>
+                            <td>${s.personalInfo.firstName} ${s.personalInfo.lastName}</td>
+                         <td>${s.academicInfo?.major}</td>
+                         <td>${s.academicInfo?.gpa || 0.0}</td>
+                        </tr>
+                    `).join('');
+                }
+            } catch (error) {
+                console.error("Error loading dashboard:", error);
+                document.getElementById('stat-count').innerText = "Error";
+            }
+        }
+        // Run on load
+        loadAdminStats();
+    </script>
+
+</body>
+</html>

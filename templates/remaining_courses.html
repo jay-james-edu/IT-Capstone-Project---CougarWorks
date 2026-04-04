@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remaining Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script>const CURRENT_ID = "{{ student_id }}";</script>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks</h2>
+            <a href="{{ url_for('system.student_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.degree_progress') }}">Degree Progress</a>
+            <a href="{{ url_for('system.remaining_courses') }}" class="active">Remaining Courses</a>
+            <a href="{{ url_for('system.gpa_standing') }}">GPA Standing</a>
+            <a href="{{ url_for('system.profile') }}">Profile</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Remaining Courses</h1>
+                <p>Classes needed for graduation</p>
+            </div>
+
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadRemaining() {
+            const res = await fetch(`/api/students/${CURRENT_ID}/degree-progress-summary`);
+            const data = await res.json();
+            const tbody = document.getElementById('table-body');
+
+            if(!data.remainingCourses || data.remainingCourses.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3" style="text-align:center">You are on track! No remaining courses listed.</td></tr>';
+                return;
+            }
+
+            data.remainingCourses.forEach(course => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td><strong>${course.code}</strong></td>
+                        <td>${course.category}</td>
+                        <td style="color: #ef4444;">Not Started</td>
+                    </tr>
+                `;
+            });
+        }
+        loadRemaining();
+    </script>
+</body>
+</html>

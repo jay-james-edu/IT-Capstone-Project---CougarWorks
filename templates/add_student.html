@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>CougarWorks</h2>
+            <a href="{{ url_for('system.dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.students') }}">Manage Students</a>
+            <a href="{{ url_for('system.search_students') }}">Search Students</a>
+            <a href="{{ url_for('system.add_student') }}">Add Student</a>
+            <a href="{{ url_for('system.logout') }}">Logout</a>
+        </div>
+
+        <div class="main-content">
+            <div class="topbar">
+                <h1>Add Student</h1>
+                <p>Create a new student record.</p>
+            </div>
+
+            <div class="info-box">
+                <form>
+                    <p><input type="text" placeholder="Full Name" style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #d1d5db; border-radius: 8px;"></p>
+                    <p><input type="email" placeholder="Email" style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #d1d5db; border-radius: 8px;"></p>
+                    <p><input type="text" placeholder="Major" style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #d1d5db; border-radius: 8px;"></p>
+                    <button type="submit" style="padding: 12px 18px; border: none; border-radius: 8px; background: #2563eb; color: white;">Add Student</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

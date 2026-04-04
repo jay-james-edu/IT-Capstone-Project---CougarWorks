@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advisor Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks</h2>
+            <a href="{{ url_for('system.admin') }}" class="active">Portal</a>
+            <a href="{{ url_for('system.admin_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.search_students') }}">Manage Students</a>
+            <a href="{{ url_for('system.add_student') }}">Add Student</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1 id="welcome-msg">Loading...</h1>
+                <p>Select a task below to manage the system.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>System Dashboard</h3>
+                    <p>View overall statistics.</p>
+                    <a href="{{ url_for('system.admin_dashboard') }}">Go</a>
+                </div>
+                <div class="card">
+                    <h3>Manage Students</h3>
+                    <p>Search and edit student records.</p>
+                    <a href="{{ url_for('system.search_students') }}">Manage</a>
+                </div>
+                <div class="card">
+                    <h3>Add Student</h3>
+                    <p>Register a new student.</p>
+                    <a href="{{ url_for('system.add_student') }}">Add</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadDashboard() {
+            const res = await fetch(`/api/advisors/${CURRENT_ID}`);
+            const s = await res.json();
+
+            document.getElementById('welcome-msg').innerText = `Welcome, ${s.personalInfo.firstName} ${s.personalInfo.lastName}`;
+        }
+        loadDashboard();
+    </script>
+</body>
+</html>

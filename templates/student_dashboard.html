@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script>const CURRENT_ID = "{{ student_id }}";</script>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks</h2>
+            <a href="{{ url_for('system.student_dashboard') }}" class="active">Dashboard</a>
+            <a href="{{ url_for('system.degree_progress') }}">Degree Progress</a>
+            <a href="{{ url_for('system.remaining_courses') }}">Remaining Courses</a>
+            <a href="{{ url_for('system.gpa_standing') }}">GPA Standing</a>
+            <a href="{{ url_for('system.profile') }}">Profile</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1 id="welcome-msg">Loading...</h1>
+                <p id="user-subtext">Student Dashboard</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Degree Progress</h3>
+                    <p>Track your degree requirements.</p>
+                    <a href="{{ url_for('system.degree_progress') }}">View</a>
+                </div>
+                <div class="card">
+                    <h3>Remaining Courses</h3>
+                    <p>Classes left for graduation.</p>
+                    <a href="{{ url_for('system.remaining_courses') }}">View</a>
+                </div>
+                <div class="card">
+                    <h3>GPA Standing</h3>
+                    <p>Review your academic standing.</p>
+                    <a href="{{ url_for('system.gpa_standing') }}">View</a>
+                </div>
+                <div class="card">
+                    <h3>Profile</h3>
+                    <p>Update your information.</p>
+                    <a href="{{ url_for('system.profile') }}">View</a>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="section-title">Academic Snapshot</div>
+                <ul>
+                    <li><strong>Program:</strong> <span id="prog-text"></span></li>
+                    <li><strong>Classification:</strong> <span id="class-text"></span></li>
+                    <li><strong>Catalog Year:</strong> 2024-2025</li>
+                    <li><strong>Advisor:</strong> <span id="advisor-text"></span></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadDashboard() {
+            const res = await fetch(`/api/students/${CURRENT_ID}`);
+            const s = await res.json();
+
+            document.getElementById('welcome-msg').innerText = `Welcome, ${s.personalInfo.firstName} ${s.personalInfo.lastName}`;
+            document.getElementById('prog-text').innerText = s.academicInfo.major;
+
+            const creds = s.academicInfo.creditsEarned || 0;
+            let classification = "Freshman";
+            if(creds > 30) classification = "Sophomore";
+            if(creds > 60) classification = "Junior";
+            if(creds > 90) classification = "Senior";
+            document.getElementById('class-text').innerText = classification;
+
+            document.getElementById('advisor-text').innerText = s.advisorId || "Unassigned";
+        }
+        loadDashboard();
+    </script>
+</body>
+</html>

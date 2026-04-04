@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script>const CURRENT_ID = "{{ student_id }}";</script>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks</h2>
+            <a href="{{ url_for('system.student_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.degree_progress') }}">Degree Progress</a>
+            <a href="{{ url_for('system.remaining_courses') }}">Remaining Courses</a>
+            <a href="{{ url_for('system.gpa_standing') }}">GPA Standing</a>
+            <a href="{{ url_for('system.profile') }}" class="active">Profile</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>My Profile</h1>
+            </div>
+
+            <div class="card" style="max-width: 600px;">
+                <h3>Personal Information</h3>
+                <p><strong>Name:</strong> <span id="p-name">Loading...</span></p>
+                <p><strong>Student ID:</strong> <span id="p-id"></span></p>
+                <p><strong>Email:</strong> <span id="p-email"></span></p>
+                <p><strong>Phone:</strong> <span id="p-phone"></span></p>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+                <h3>Academic Information</h3>
+                <p><strong>Major:</strong> <span id="p-major"></span></p>
+                <p><strong>Classification:</strong> <span id="p-class"></span></p>
+                <p><strong>Catalog Year:</strong> 2024-2025</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadProfile() {
+            const res = await fetch(`/api/students/${CURRENT_ID}`);
+            const s = await res.json();
+            document.getElementById('p-name').innerText = `${s.personalInfo.firstName} ${s.personalInfo.lastName}`;
+            document.getElementById('p-id').innerText = CURRENT_ID;
+            document.getElementById('p-email').innerText = s.personalInfo.email;
+            document.getElementById('p-phone').innerText = s.personalInfo.phone || "N/A";
+            document.getElementById('p-major').innerText = s.academicInfo.major;
+            document.getElementById('p-class').innerText = "Senior"; 
+        }
+        loadProfile();
+    </script>
+</body>
+</html>

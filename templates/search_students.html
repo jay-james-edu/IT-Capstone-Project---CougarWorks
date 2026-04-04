@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks Admin</h2>
+            <a href="{{ url_for('system.admin') }}">Portal</a>
+            <a href="{{ url_for('system.admin_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.search_students') }}" class="active">Manage Students</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Search Students</h1>
+                <input type="text" id="search-input" placeholder="Search by name or ID..." 
+                       onkeyup="filterStudents()" 
+                       style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 300px;">
+            </div>
+
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Major</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-list"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let allStudents = [];
+
+        async function loadAllStudents() {
+            const res = await fetch('/api/students');
+            allStudents = await res.json();
+            renderTable(allStudents);
+        }
+
+        function renderTable(students) {
+            const tbody = document.getElementById('student-list');
+            tbody.innerHTML = students.map(s => `
+                <tr>
+                    <td>${s.studentId}</td>
+                    <td>${s.personalInfo.firstName} ${s.personalInfo.lastName}</td>
+                    <td>${s.academicInfo?.major}</td>
+                    <td>${s.personalInfo.email}</td>
+                    <td><a href="#" style="color: #2563eb;">Edit</a></td>
+                </tr>
+            `).join('');
+        }
+
+        function filterStudents() {
+            const term = document.getElementById('search-input').value.toLowerCase();
+            const filtered = allStudents.filter(s => 
+                s.studentId.toLowerCase().includes(term) || 
+                `${s.personalInfo.firstName} ${s.personalInfo.lastName}`.toLowerCase().includes(term)
+            );
+            renderTable(filtered);
+        }
+
+        loadAllStudents();
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Degree Progress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script>const CURRENT_ID = "{{ student_id }}";</script>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks</h2>
+            <a href="{{ url_for('system.student_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.degree_progress') }}" class="active">Degree Progress</a>
+            <a href="{{ url_for('system.remaining_courses') }}">Remaining Courses</a>
+            <a href="{{ url_for('system.gpa_standing') }}">GPA Standing</a>
+            <a href="{{ url_for('system.profile') }}">Profile</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Degree Progress</h1>
+                <p>Computer Science (BS)</p>
+            </div>
+
+            <div class="info-box">
+                <div class="section-title">Overall Completion</div>
+                <!-- Simple Visual Representation using HTML Progress Bar -->
+                <div class="progress-bar">
+                    <div id="main-progress-fill" class="progress-fill" style="width: 0%"></div>
+                </div>
+                <p style="text-align: center; margin-top: 5px;"><strong><span id="percent-display">0</span>% Complete</strong></p>
+            </div>
+
+            <div class="card-grid" id="category-container">
+                <!-- Categories injected here -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadProgress() {
+            const res = await fetch(`/api/students/${CURRENT_ID}/degree-progress-summary`);
+            if(!res.ok) { console.log("API Error"); return; }
+            const data = await res.json();
+
+            // Update Main Progress
+            document.getElementById('main-progress-fill').style.width = `${data.overallProgress.percentage}%`;
+            document.getElementById('percent-display').innerText = data.overallProgress.percentage;
+
+            // Update Categories
+            const container = document.getElementById('category-container');
+            container.innerHTML = '';
+
+            data.categoryProgress.forEach(cat => {
+                container.innerHTML += `
+                    <div class="card">
+                        <h3>${cat.name}</h3>
+                        <p>${cat.completed} / ${cat.required} credits</p>
+                        <div class="progress-bar" style="margin-bottom: 10px; margin-top: 10px;">
+                            <div class="progress-fill" style="width: ${cat.percentage}%"></div>
+                        </div>
+                        <p style="color: #6b7280;">${cat.percentage}% Complete</p>
+                    </div>
+                `;
+            });
+        }
+        loadProgress();
+    </script>
+</body>
+</html>

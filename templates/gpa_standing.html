@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Standing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script>const CURRENT_ID = "{{ student_id }}";</script>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks</h2>
+            <a href="{{ url_for('system.student_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.degree_progress') }}">Degree Progress</a>
+            <a href="{{ url_for('system.remaining_courses') }}">Remaining Courses</a>
+            <a href="{{ url_for('system.gpa_standing') }}" class="active">GPA Standing</a>
+            <a href="{{ url_for('system.profile') }}">Profile</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>GPA & Academic Standing</h1>
+                <p>Review your current academic performance</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Current GPA</h3>
+                    <h2 id="gpa-display" style="color: #2563eb; font-size: 40px;">0.00</h2>
+                </div>
+                <div class="card">
+                    <h3>Academic Standing</h3>
+                    <h2 id="standing-display" style="color: #10b981; font-size: 30px;">-</h2>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="section-title">Standing Criteria</div>
+                <ul>
+                    <li><strong>President's List:</strong> GPA 3.8+</li>
+                    <li><strong>Dean's List:</strong> GPA 3.5 - 3.79</li>
+                    <li><strong>Good Standing:</strong> GPA 2.0+</li>
+                    <li><strong>Academic Probation:</strong> GPA 1.0 - 1.99</li>
+                    <li><strong>Suspension:</strong> GPA Under 1.0</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadGPA() {
+            const res = await fetch(`/api/students/${CURRENT_ID}`);
+            const s = await res.json();
+
+            const gpa = s.academicInfo.gpa || 0;
+            document.getElementById('gpa-display').innerText = gpa.toFixed(2);
+
+            let standing = "Good Standing";
+            if (gpa >= 3.8) standing = "President's List";
+            else if (gpa >= 3.5) standing = "Dean's List";
+            else if (gpa < 2.0 && gpa >= 1.0) standing = "Academic Probation";
+            else if (gpa < 1.0) standing = "Suspension";
+
+            document.getElementById('standing-display').innerText = standing;
+        }
+        loadGPA();
+    </script>
+</body>
+</html>

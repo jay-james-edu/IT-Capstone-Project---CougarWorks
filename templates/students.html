@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>CougarWorks Admin</h2>
+            <a href="{{ url_for('system.admin') }}">Portal</a>
+            <a href="{{ url_for('system.admin_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('system.search_students') }}">Manage Students</a>
+            <a href="{{ url_for('system.login') }}" style="margin-top: auto; background-color: #ef4444;">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Add New Student</h1>
+            </div>
+
+            <div class="card" style="max-width: 500px;">
+                <form onsubmit="addStudent(event)">
+                    <div style="margin-bottom: 10px;">
+                        <label style="display:block; margin-bottom:5px;">First Name</label>
+                        <input type="text" id="fname" class="login-container input" style="width:100%; padding:10px;" required>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display:block; margin-bottom:5px;">Last Name</label>
+                        <input type="text" id="lname" class="login-container input" style="width:100%; padding:10px;" required>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display:block; margin-bottom:5px;">Email</label>
+                        <input type="email" id="email" class="login-container input" style="width:100%; padding:10px;" required>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display:block; margin-bottom:5px;">Initial Password</label>
+                        <input type="password" id="pass" class="login-container input" style="width:100%; padding:10px;" required>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display:block; margin-bottom:5px;">Major</label>
+                        <select id="major" class="login-container input" style="width:100%; padding:10px;">
+                            <option>Computer Science</option>
+                            <option>Information Technology</option>
+                            <option>Cybersecurity</option>
+                            <option>Biology</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" style="width: 100%; padding: 12px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer;">Create Student</button>
+                    <p id="msg"></p>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function addStudent(e) {
+            e.preventDefault();
+            const form = {
+                studentId: `S${Math.floor(1000 + Math.random() * 9000)}`, // Auto Gen ID
+                personalInfo: {
+                    firstName: document.getElementById('fname').value,
+                    lastName: document.getElementById('lname').value,
+                    email: document.getElementById('email').value,
+                    password: document.getElementById('pass').value
+                },
+                academicInfo: {
+                    major: document.getElementById('major').value,
+                    gpa: 0.0,
+                    creditsEarned: 0,
+                    standing: "Freshman"
+                },
+                advisorId: "A2001"
+            };
+
+            try {
+                const res = await fetch('/api/students', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(form)
+                });
+                if(res.ok) {
+                    document.getElementById('msg').innerText = "Student Added Successfully!";
+                    document.getElementById('msg').style.color = "green";
+                } else {
+                    alert("Error adding student. Check backend logs.");
+                }
+            } catch(err) {
+                alert("Server Error. Endpoint might be missing.");
+            }
+        }
+    </script>
+</body>
+</html>

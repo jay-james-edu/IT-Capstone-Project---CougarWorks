@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Columbus State University</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.student_dashboard') }}" class="active">
+                    <span class="icon">&gt;</span> Dashboard
+                </a>
+                <a href="{{ url_for('system.degree_progress') }}">
+                    <span class="icon">&gt;</span> Degree Progress
+                </a>
+                <a href="{{ url_for('system.remaining_courses') }}">
+                    <span class="icon">&gt;</span> Remaining Courses
+                </a>
+                <a href="{{ url_for('system.gpa_standing') }}">
+                    <span class="icon">&gt;</span> GPA Standing
+                </a>
+                <a href="{{ url_for('system.profile') }}">
+                    <span class="icon">&gt;</span> Profile
+                </a>
+            </nav>
+            <a href="{{ url_for('system.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <div>
+                    <h1>Welcome, {{ student.personalInfo.firstName }}!</h1>
+                    <p>Track your academic journey at Columbus State University</p>
+                </div>
+                <div class="user-badge">
+                    <strong>{{ student.studentId }}</strong> | Student
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Degree Progress</h3>
+                    <div class="stat-value">{{ (student.academicInfo.creditsEarned / 120 * 100) | round(0) | int }}%</div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: {{ (student.academicInfo.creditsEarned / 120 * 100) | round(0) | int }}%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card {% if standing.isGoodStanding %}success{% else %}warning{% endif %}">
+                    <h3>Current GPA</h3>
+                    <div class="stat-value">{{ gpa | round(2) }}</div>
+                    <span class="stat-badge {% if standing.isGoodStanding %}good{% else %}warning{% endif %}">
+                        {{ standing.status }}
+                    </span>
+                </div>
+                <div class="stat-card">
+                    <h3>Credits Earned</h3>
+                    <div class="stat-value">{{ student.academicInfo.creditsEarned }}</div>
+                    <span class="stat-badge">of 120 required</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Courses Remaining</h3>
+                    <div class="stat-value">{{ 120 - student.academicInfo.creditsEarned }}</div>
+                    <a href="{{ url_for('system.remaining_courses') }}" style="color: var(--csu-blue); font-size: 13px;">View List →</a>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Degree Progress</h3>
+                    <p>Track your degree requirements and completion status.</p>
+                    <a href="{{ url_for('system.degree_progress') }}">View Details</a>
+                </div>
+                <div class="card">
+                    <h3>Remaining Courses</h3>
+                    <p>Classes left to complete for graduation.</p>
+                    <a href="{{ url_for('system.remaining_courses') }}">View List</a>
+                </div>
+                <div class="card">
+                    <h3>GPA Standing</h3>
+                    <p>Review your academic standing and GPA history.</p>
+                    <a href="{{ url_for('system.gpa_standing') }}">View Details</a>
+                </div>
+                <div class="card">
+                    <h3>Profile</h3>
+                    <p>View and update your personal information.</p>
+                    <a href="{{ url_for('system.profile') }}">View Profile</a>
+                </div>
+            </div>
+
+            <!-- Student Information -->
+            <div class="info-box">
+                <h3 class="section-title">Student Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Student ID</label>
+                        <span>{{ student.studentId }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Major</label>
+                        <span>{{ student.academicInfo.major }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Classification</label>
+                        <span>{{ student.personalInfo.classification }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Catalog Year</label>
+                        <span>{{ student.academicInfo.catalogYear }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Advisor</label>
+                        <span>{{ student.academicInfo.advisor }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <span>{{ student.email }}</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

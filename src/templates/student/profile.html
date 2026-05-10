@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Student Portal</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.student_dashboard') }}"><span class="icon">&gt;</span> Dashboard</a>
+                <a href="{{ url_for('system.degree_progress') }}"><span class="icon">&gt;</span> Degree Progress</a>
+                <a href="{{ url_for('system.remaining_courses') }}"><span class="icon">&gt;</span> Remaining Courses</a>
+                <a href="{{ url_for('system.gpa_standing') }}"><span class="icon">&gt;</span> GPA Standing</a>
+                <a href="{{ url_for('system.profile') }}" class="active"><span class="icon">&gt;</span> Profile</a>
+            </nav>
+            <a href="{{ url_for('system.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>My Profile</h1>
+            </div>
+
+            <!-- Profile Header -->
+            <div class="info-box profile-header">
+                <div class="avatar">
+                    {{ student.personalInfo.firstName[0] }}{{ student.personalInfo.lastName[0] }}
+                </div>
+                <div class="profile-name">
+                    <div class="name">{{ student.personalInfo.firstName }} {{ student.personalInfo.lastName }}</div>
+                    <div class="email">{{ student.email }}</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="section-title">Personal Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Student ID</label>
+                        <span>{{ student.studentId }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>First Name</label>
+                        <span>{{ student.personalInfo.firstName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Last Name</label>
+                        <span>{{ student.personalInfo.lastName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <span>{{ student.email }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Phone</label>
+                        <span>{{ student.personalInfo.phone or 'N/A' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Address</label>
+                        <span>{{ formatted_address }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="section-title">Academic Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Major</label>
+                        <span>{{ student.academicInfo.major or 'Not Assigned' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Classification</label>
+                        <span>{{ classification }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Catalog Year</label>
+                        <span>{{ student.academicInfo.catalogYear or '2024-2025' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Advisor</label>
+                        <span>{{ advisor_name }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Credits Earned</label>
+                        <span>{{ credits }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Enrollment Status</label>
+                        <span>{{ student.academicInfo.enrollmentStatus or 'Active' }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="{{ url_for('system.student_dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

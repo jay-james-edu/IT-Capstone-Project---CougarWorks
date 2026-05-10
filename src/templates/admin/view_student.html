@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Student - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script>const CURRENT_ID = "{{ student_id }}";</script>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Admin Portal</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.dashboard') }}">
+                    <span class="icon">&gt;</span> Dashboard
+                </a>
+            </nav>
+            <a href="{{ url_for('system.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Student Profile</h1>
+                <p>{{ student.personalInfo.firstName }} {{ student.personalInfo.lastName }} ({{ student_id }})</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Student Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Student ID</label>
+                        <span>{{ student.studentId }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <span>{{ student.email }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Major</label>
+                        <span>{{ student.academicInfo.major }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Advisor</label>
+                        <span>{{ student.academicInfo.get('advisor', 'Unassigned') }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Degree Progress</h3>
+                    <div class="stat-value" id="progress-percent">0%</div>
+                    <div class="progress-bar" style="height: 8px; margin-top: 12px;">
+                        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Credits</h3>
+                    <div class="stat-value" id="credits">0/120</div>
+                </div>
+                <div class="stat-card">
+                    <h3>GPA</h3>
+                    <div class="stat-value" id="gpa">0.00</div>
+                </div>
+            </div>
+
+            <!-- Degree Progress Categories -->
+            <div id="category-container">
+                <div style="padding: 40px; text-align: center; color: var(--text-secondary);">
+                    Loading degree progress...
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="{{ url_for('system.dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadProgress() {
+            if (!CURRENT_ID) return;
+
+            try {
+                const res = await fetch(`/api/students/${CURRENT_ID}/degree-progress-summary`);
+                if (!res.ok) return;
+                const data = await res.json();
+                renderData(data);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function renderData(data) {
+            document.getElementById('progress-percent').textContent = data.overallProgress.percentage + '%';
+            document.getElementById('progress-fill').style.width = data.overallProgress.percentage + '%';
+            document.getElementById('credits').textContent = data.overallProgress.completedCredits + '/' + data.overallProgress.requiredCredits;
+            document.getElementById('gpa').textContent = data.overallProgress.currentGPA.toFixed(2);
+
+            const container = document.getElementById('category-container');
+            container.innerHTML = '';
+
+            if (!data.categoryProgress || data.categoryProgress.length === 0) {
+                container.innerHTML = '<div class="info-box"><p>No degree requirements found.</p></div>';
+                return;
+            }
+
+            data.categoryProgress.forEach(cat => {
+                let coursesHtml = '';
+
+                (cat.courses || []).forEach(course => {
+                    const statusClass = course.status === 'Completed' ? 'status-completed' : 'status-remaining';
+                    coursesHtml += `
+                        <div class="course-item">
+                            <span class="course-code">${course.code}</span>
+                            <span class="course-title">${course.name}</span>
+                            <span class="status-badge ${statusClass}">${course.status}</span>
+                            <span class="course-credits">${course.credits} Cr</span>
+                        </div>
+                    `;
+                });
+
+                container.innerHTML += `
+                    <div class="audit-section">
+                        <div class="audit-header">
+                            <h3>${cat.name}</h3>
+                            <span class="audit-status">${cat.completed}/${cat.required} Cr (${cat.percentage}%)</span>
+                        </div>
+                        <div class="audit-content">
+                            <div class="progress-bar" style="height: 6px; margin-bottom: 15px;">
+                                <div class="progress-fill" style="width: ${cat.percentage}%"></div>
+                            </div>
+                            ${coursesHtml}
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        loadProgress();
+    </script>
+</body>
+</html>

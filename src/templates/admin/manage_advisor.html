@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Advisor - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Admin Portal</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.dashboard') }}">
+                    <span class="icon">&gt;</span> Dashboard
+                </a>
+            </nav>
+            <a href="{{ url_for('auth.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Manage Advisor</h1>
+            </div>
+
+            <!-- Advisor Info -->
+            <div class="info-box">
+                <h3>Advisor Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Advisor ID</label>
+                        <span>{{ advisor.advisorId }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Name</label>
+                        <span>{{ advisor.personalInfo.firstName }} {{ advisor.personalInfo.lastName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <span>{{ advisor.email }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Advisees -->
+            <div class="table-box">
+                <h3>Current Advisees ({{ advisees|length }})</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Major</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in advisees %}
+                        <tr>
+                            <td>{{ s.studentId }}</td>
+                            <td>{{ s.personalInfo.firstName }} {{ s.personalInfo.lastName }}</td>
+                            <td>{{ s.academicInfo.major }}</td>
+                            <td>
+                                <a href="{{ url_for('admin.admin_view_student', student_id=s.studentId) }}" class="btn-small">
+                                    View Progress
+                                </a>
+                                <button class="btn-danger" onclick="removeStudent('{{ s.studentId }}')" style="margin-left: 8px;">
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr><td colspan="4">No advisees assigned</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Add New Student -->
+            <div class="info-box">
+                <h3>Assign New Student</h3>
+                <div class="form-group">
+                    <label>Select Student to Assign:</label>
+                    <select id="student-select">
+                        <option value="">-- Select Student --</option>
+                        {% for s in all_students %}
+                        {% if s.academicInfo.get('advisor') != advisor.advisorId %}
+                        <option value="{{ s.studentId }}">
+                            {{ s.studentId }} - {{ s.personalInfo.firstName }} {{ s.personalInfo.lastName }} ({{ s.academicInfo.major }})
+                        </option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <button class="btn-primary" onclick="assignStudent()">Assign Student</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="{{ url_for('system.dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const ADVISOR_ID = "{{ advisor.advisorId }}";
+
+        async function assignStudent() {
+            const studentId = document.getElementById('student-select').value;
+            if (!studentId) {
+                alert('Please select a student');
+                return;
+            }
+
+            try {
+                const res = await fetch('/admin/assign-advisor', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ student_id: studentId, advisor_id: ADVISOR_ID })
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    alert('Student assigned successfully!');
+                    location.reload();
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (err) {
+                alert('Request failed');
+            }
+        }
+
+        async function removeStudent(studentId) {
+            if (!confirm('Are you sure you want to remove this student from the advisor?')) return;
+
+            try {
+                const res = await fetch('/admin/remove-advisee', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ student_id: studentId })
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    alert('Student removed successfully!');
+                    location.reload();
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (err) {
+                alert('Request failed');
+            }
+        }
+    </script>
+</body>
+</html>

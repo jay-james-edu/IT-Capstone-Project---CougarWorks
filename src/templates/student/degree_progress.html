@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Degree Progress - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script>const CURRENT_ID = "{{ student_id }}";</script>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Columbus State University</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.student_dashboard') }}">
+                    <span class="icon">&gt;</span> Dashboard
+                </a>
+                <a href="{{ url_for('system.degree_progress') }}" class="active">
+                    <span class="icon">&gt;</span> Degree Progress
+                </a>
+                <a href="{{ url_for('system.remaining_courses') }}">
+                    <span class="icon">&gt;</span> Remaining Courses
+                </a>
+                <a href="{{ url_for('system.gpa_standing') }}">
+                    <span class="icon">&gt;</span> GPA Standing
+                </a>
+                <a href="{{ url_for('system.profile') }}">
+                    <span class="icon">&gt;</span> Profile
+                </a>
+            </nav>
+            <a href="{{ url_for('system.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <div>
+                    <h1>Degree Progress <span id="sim-badge" class="simulation-badge" style="display:none;">SIMULATION</span></h1>
+                    <p id="major-text">{{ current_major }}</p>
+                </div>
+                <div class="user-badge">
+                    <strong>{{ student_id }}</strong>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" id="tab-academic" onclick="switchTab('academic')">Academic</button>
+                <button class="tab" id="tab-whatif" onclick="switchTab('whatif')">What-If</button>
+            </div>
+
+            <!-- What-If Panel -->
+            <div id="whatif-panel" class="simulation-panel" style="display:none;">
+                <div class="sim-controls">
+                    <span class="sim-label">What-If Simulator:</span>
+                    <select id="major-select" class="sim-dropdown">
+                        <option value="" disabled selected>-- Select a Different Major --</option>
+                        <option value="CS">Computer Science (BS)</option>
+                        <option value="IT">Information Technology (BS)</option>
+                        <option value="Cybersecurity">Cybersecurity (BS)</option>
+                        <option value="MIS">Management Information Systems (BBA)</option>
+                    </select>
+                    <button id="reset-sim" class="reset-btn" style="display:none;" onclick="resetSimulation()">Reset</button>
+                </div>
+            </div>
+
+            <!-- Summary Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Degree Progress</h3>
+                    <div class="stat-value" id="progress-percent">0%</div>
+                    <div class="progress-bar" style="height: 8px; margin-top: 12px;">
+                        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Credits</h3>
+                    <div class="stat-value" id="credits">0/120</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Overall GPA</h3>
+                    <div class="stat-value" id="gpa">0.00</div>
+                </div>
+            </div>
+
+            <!-- Category Container -->
+            <div id="category-container">
+                <div style="padding: 40px; text-align: center; color: var(--text-secondary);">
+                    Loading degree requirements...
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let currentTab = 'academic';
+
+        function switchTab(tab) {
+            currentTab = tab;
+            document.getElementById('tab-academic').classList.toggle('active', tab === 'academic');
+            document.getElementById('tab-whatif').classList.toggle('active', tab === 'whatif');
+            document.getElementById('whatif-panel').style.display = tab === 'whatif' ? 'block' : 'none';
+
+            if (tab === 'academic') {
+                document.getElementById('sim-badge').style.display = 'none';
+                loadActualData();
+            }
+        }
+
+        document.getElementById('major-select').addEventListener('change', async function() {
+            const major = this.value;
+            if (major) {
+                document.getElementById('sim-badge').style.display = 'inline-block';
+                document.getElementById('reset-sim').style.display = 'inline-block';
+                await loadWhatIf(major);
+            }
+        });
+
+        function resetSimulation() {
+            document.getElementById('major-select').value = '';
+            document.getElementById('reset-sim').style.display = 'none';
+            document.getElementById('sim-badge').style.display = 'none';
+            loadActualData();
+        }
+
+        async function loadActualData() {
+            try {
+                const res = await fetch(`/api/students/${CURRENT_ID}/degree-progress-summary`);
+                if (!res.ok) {
+                    console.error('API error:', res.status);
+                    return;
+                }
+                const data = await res.json();
+                renderData(data);
+            } catch (e) {
+                console.error('Error loading degree progress:', e);
+            }
+        }
+
+        async function loadWhatIf(major) {
+            try {
+                const res = await fetch(`/api/students/${CURRENT_ID}/what-if?major=${encodeURIComponent(major)}`);
+                if (!res.ok) {
+                    console.error('What-If API error:', res.status);
+                    return;
+                }
+                const data = await res.json();
+                renderData(data);
+            } catch (e) {
+                console.error('Error loading what-if:', e);
+            }
+        }
+
+        function renderData(data) {
+            document.getElementById('major-text').textContent = data.overallProgress.programName;
+            document.getElementById('progress-percent').textContent = data.overallProgress.percentage + '%';
+            document.getElementById('progress-fill').style.width = data.overallProgress.percentage + '%';
+            document.getElementById('credits').textContent = data.overallProgress.completedCredits + '/' + data.overallProgress.requiredCredits;
+            document.getElementById('gpa').textContent = data.overallProgress.currentGPA.toFixed(2);
+
+            const container = document.getElementById('category-container');
+            container.innerHTML = '';
+
+            if (!data.categoryProgress || data.categoryProgress.length === 0) {
+                container.innerHTML = '<div class="info-box"><p>No degree requirements found.</p></div>';
+                return;
+            }
+
+            data.categoryProgress.forEach(cat => {
+                let coursesHtml = '';
+
+                (cat.courses || []).forEach(course => {
+                    const isCompleted = course.status === 'Completed';
+                    const statusClass = isCompleted ? 'status-completed' : 'status-remaining';
+                    const gradeDisplay = course.grade ? ` (${course.grade})` : '';
+                    const semesterDisplay = course.semester ? ` - ${course.semester}` : '';
+
+                    coursesHtml += `
+                        <div class="course-item">
+                            <span class="course-code">${course.code}</span>
+                            <span class="course-title">${course.name}</span>
+                            <span class="status-badge ${statusClass}">${course.status}${gradeDisplay}</span>
+                            <span class="course-credits">${course.credits} Cr</span>
+                            ${semesterDisplay ? `<span class="course-semester">${semesterDisplay}</span>` : ''}
+                        </div>
+                    `;
+                });
+
+                container.innerHTML += `
+                    <div class="audit-section">
+                        <div class="audit-header">
+                            <h3>${cat.name}</h3>
+                            <span class="audit-status ${cat.percentage >= 100 ? 'complete' : 'in-progress'}">${cat.completed}/${cat.required} Cr (${cat.percentage}%)</span>
+                        </div>
+                        <div class="audit-content">
+                            <div class="progress-bar" style="height: 6px; margin-bottom: 15px;">
+                                <div class="progress-fill" style="width: ${cat.percentage}%"></div>
+                            </div>
+                            ${coursesHtml || '<div style="color: var(--text-muted); text-align: center; padding: 15px;">No courses listed</div>'}
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Initial load
+        loadActualData();
+    </script>
+</body>
+</html>

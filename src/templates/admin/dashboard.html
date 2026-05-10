@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Admin Portal</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.dashboard') }}" class="active">
+                    <span class="icon">&gt;</span> Dashboard
+                </a>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">User Management</span>
+                    <a href="{{ url_for('admin.admin_add_student') }}">
+                        <span class="icon">+</span> Add Student
+                    </a>
+                    <a href="{{ url_for('admin.admin_add_advisor') }}">
+                        <span class="icon">+</span> Add Advisor
+                    </a>
+                </div>
+            </nav>
+            <a href="{{ url_for('auth.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Admin Overview</h1>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <div class="stat-value">{{ students|length }}</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Advisors</h3>
+                    <div class="stat-value">{{ advisors|length }}</div>
+                </div>
+            </div>
+
+            <div class="table-box">
+                <h3>All Advisors</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Advisees</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if advisors %}
+                        {% for adv in advisors %}
+                        <tr>
+                            <td>{{ adv.advisorId }}</td>
+                            <td>{{ adv.personalInfo.firstName }} {{ adv.personalInfo.lastName }}</td>
+                            <td>{{ adv.personalInfo.email if adv.personalInfo.email else adv.email }}</td>
+                            <td>{{ students | selectattr('academicInfo.advisor', 'equalto', adv.advisorId) | list | length }}</td>
+                            <td>
+                                <a href="{{ url_for('admin.admin_manage_advisor', advisor_id=adv.advisorId) }}" class="btn-small">Manage</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr><td colspan="5">No advisors found</td></tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-box">
+                <h3>All Students</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Major</th>
+                            <th>Assigned Advisor</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if students %}
+                        {% for s in students %}
+                        <tr>
+                            <td>{{ s.studentId }}</td>
+                            <td>{{ s.personalInfo.firstName }} {{ s.personalInfo.lastName }}</td>
+                            <td>{{ s.academicInfo.major }}</td>
+                            <td>{{ s.academicInfo.get('advisor', 'Unassigned') }}</td>
+                            <td>
+                                <a href="{{ url_for('admin.admin_edit_student', student_id=s.studentId) }}" class="btn-small">Edit</a>
+                                <form method="POST" action="{{ url_for('admin.admin_delete_student', student_id=s.studentId) }}" class="inline-form">
+                                    <button type="submit" class="btn-small btn-delete" onclick="return confirm('Delete this student?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <tr><td colspan="5">No students found</td></tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+[
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439401"
+    },
+    "studentId": "920001234",
+    "major": "Computer Science",
+    "catalogYear": "2022",
+    "overallProgress": {
+      "percentage": 60,
+      "completedCredits": 72,
+      "requiredCredits": 120,
+      "currentGPA": 3.45
+    },
+    "categoryProgress": [
+      {
+        "name": "Core IMPACTS",
+        "completed": 35,
+        "required": 42,
+        "percentage": 83
+      },
+      {
+        "name": "Field of Study Requirements",
+        "completed": 18,
+        "required": 18,
+        "percentage": 100
+      },
+      {
+        "name": "Required for the Major",
+        "completed": 12,
+        "required": 20,
+        "percentage": 60
+      },
+      {
+        "name": "Major Electives",
+        "completed": 6,
+        "required": 30,
+        "percentage": 20
+      },
+      {
+        "name": "General Electives",
+        "completed": 1,
+        "required": 10,
+        "percentage": 10
+      }
+    ],
+    "lastUpdated": {
+      "$date": "2025-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439402"
+    },
+    "studentId": "920005678",
+    "major": "Management Information Systems",
+    "catalogYear": "2021",
+    "overallProgress": {
+      "percentage": 85,
+      "completedCredits": 102,
+      "requiredCredits": 120,
+      "currentGPA": 3.78
+    },
+    "categoryProgress": [
+      {
+        "name": "Core IMPACTS (Areas A-E)",
+        "completed": 42,
+        "required": 42,
+        "percentage": 100
+      },
+      {
+        "name": "Business Core (Area G)",
+        "completed": 27,
+        "required": 27,
+        "percentage": 100
+      },
+      {
+        "name": "MIS Major Requirements (Area H)",
+        "completed": 18,
+        "required": 24,
+        "percentage": 75
+      },
+      {
+        "name": "Business Electives (Area I)",
+        "completed": 12,
+        "required": 12,
+        "percentage": 100
+      },
+      {
+        "name": "Capstone",
+        "completed": 3,
+        "required": 3,
+        "percentage": 100
+      }
+    ],
+    "lastUpdated": {
+      "$date": "2025-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439403"
+    },
+    "studentId": "920009876",
+    "major": "Information Technology",
+    "catalogYear": "2023",
+    "overallProgress": {
+      "percentage": 38,
+      "completedCredits": 45,
+      "requiredCredits": 120,
+      "currentGPA": 2.85
+    },
+    "categoryProgress": [
+      {
+        "name": "Core IMPACTS",
+        "completed": 22,
+        "required": 42,
+        "percentage": 52
+      },
+      {
+        "name": "Field of Study Requirements",
+        "completed": 8,
+        "required": 18,
+        "percentage": 44
+      },
+      {
+        "name": "Required for the Major",
+        "completed": 0,
+        "required": 35,
+        "percentage": 0
+      },
+      {
+        "name": "Major Electives",
+        "completed": 0,
+        "required": 15,
+        "percentage": 0
+      },
+      {
+        "name": "General Electives",
+        "completed": 0,
+        "required": 10,
+        "percentage": 0
+      }
+    ],
+    "lastUpdated": {
+      "$date": "2025-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439404"
+    },
+    "studentId": "920003456",
+    "major": "Cybersecurity",
+    "catalogYear": "2022",
+    "overallProgress": {
+      "percentage": 65,
+      "completedCredits": 78,
+      "requiredCredits": 120,
+      "currentGPA": 3.92
+    },
+    "categoryProgress": [
+      {
+        "name": "Core IMPACTS",
+        "completed": 22,
+        "required": 42,
+        "percentage": 52
+      },
+      {
+        "name": "Field of Study Requirements",
+        "completed": 18,
+        "required": 18,
+        "percentage": 100
+      },
+      {
+        "name": "Required for the Major",
+        "completed": 17,
+        "required": 27,
+        "percentage": 63
+      },
+      {
+        "name": "Major Electives",
+        "completed": 3,
+        "required": 24,
+        "percentage": 13
+      },
+      {
+        "name": "General Electives",
+        "completed": 0,
+        "required": 9,
+        "percentage": 0
+      }
+    ],
+    "lastUpdated": {
+      "$date": "2025-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439405"
+    },
+    "studentId": "920007890",
+    "major": "Computer Science",
+    "catalogYear": "2021",
+    "overallProgress": {
+      "percentage": 90,
+      "completedCredits": 108,
+      "requiredCredits": 120,
+      "currentGPA": 3.65
+    },
+    "categoryProgress": [
+      {
+        "name": "Core IMPACTS",
+        "completed": 42,
+        "required": 42,
+        "percentage": 100
+      },
+      {
+        "name": "Field of Study Requirements",
+        "completed": 18,
+        "required": 18,
+        "percentage": 100
+      },
+      {
+        "name": "Required for the Major",
+        "completed": 20,
+        "required": 20,
+        "percentage": 100
+      },
+      {
+        "name": "Major Electives",
+        "completed": 24,
+        "required": 30,
+        "percentage": 80
+      },
+      {
+        "name": "General Electives",
+        "completed": 4,
+        "required": 10,
+        "percentage": 40
+      }
+    ],
+    "lastUpdated": {
+      "$date": "2025-01-15T00:00:00.000Z"
+    }
+  }
+]

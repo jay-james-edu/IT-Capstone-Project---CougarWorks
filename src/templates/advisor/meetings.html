@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Meetings - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Advisor Portal</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.dashboard') }}">
+                    <span class="icon">&gt;</span> My Advisees
+                </a>
+                <a href="{{ url_for('advisors.advisor_meetings') }}" class="active">
+                    <span class="icon">&gt;</span> Meetings
+                </a>
+            </nav>
+            <a href="{{ url_for('auth.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>My Scheduled Meetings</h1>
+                <a href="{{ url_for('advisors.schedule_meeting') }}" class="btn-primary">Schedule New Meeting</a>
+            </div>
+
+            {% if meetings %}
+            <div class="meetings-grid">
+                {% for meeting in meetings %}
+                <div class="meeting-card">
+                    <div class="meeting-status status-{{ meeting.status|lower }}">
+                        {{ meeting.status }}
+                    </div>
+                    <h3 class="meeting-title">{{ meeting.title }}</h3>
+                    <div class="meeting-info">
+                        <p><strong>Student:</strong> {{ meeting.studentName }}</p>
+                        <p><strong>Date:</strong> {{ meeting.scheduledDate }}</p>
+                        <p><strong>Time:</strong> {{ meeting.startTime }} - {{ meeting.endTime }}</p>
+                        <p><strong>Location:</strong> {{ meeting.location }}</p>
+                        {% if meeting.description %}
+                        <p><strong>Description:</strong> {{ meeting.description }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="meeting-actions">
+                        {% if meeting.status == 'Scheduled' %}
+                        <form method="POST" action="{{ url_for('advisors.update_meeting', meeting_id=meeting.meetingId) }}" class="inline-form">
+                            <input type="hidden" name="status" value="Completed">
+                            <button type="submit" class="btn-small btn-success">Mark Complete</button>
+                        </form>
+                        <form method="POST" action="{{ url_for('advisors.update_meeting', meeting_id=meeting.meetingId) }}" class="inline-form">
+                            <input type="hidden" name="status" value="Cancelled">
+                            <button type="submit" class="btn-small btn-danger">Cancel</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="info-box">
+                <p>No scheduled meetings. <a href="{{ url_for('advisors.schedule_meeting') }}">Schedule your first meeting.</a></p>
+            </div>
+            {% endif %}
+        </main>
+    </div>
+</body>
+</html>

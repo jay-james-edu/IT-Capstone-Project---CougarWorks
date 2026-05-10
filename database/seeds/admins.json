@@ -1,0 +1,60 @@
+[
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439201"
+    },
+    "adminId": "ADMIN001",
+    "email": "jennifer.adams@columbusstate.edu",
+    "password": "$2b$12$aNAZK017TYzwuoBm6Ha3veoobsCvkHoEwgvdVkT/0.4HAo6mRMd8G",
+    "personalInfo": {
+      "firstName": "Jennifer",
+      "lastName": "Adams",
+      "phoneNumber": "706-507-8800"
+    },
+    "role": "Registrar",
+    "department": "Office of the Registrar",
+    "permissions": [
+      "manage_students",
+      "manage_advisors",
+      "view_reports",
+      "send_notifications",
+      "manage_system"
+    ],
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439202"
+    },
+    "adminId": "ADMIN002",
+    "email": "christopher.martinez@columbusstate.edu",
+    "password": "$2b$12$aNAZK017TYzwuoBm6Ha3veoobsCvkHoEwgvdVkT/0.4HAo6mRMd8G",
+    "personalInfo": {
+      "firstName": "Christopher",
+      "lastName": "Martinez",
+      "phoneNumber": "706-507-8810"
+    },
+    "role": "System Administrator",
+    "department": "Information Technology Services",
+    "permissions": [
+      "manage_students",
+      "manage_advisors",
+      "manage_admins",
+      "view_reports",
+      "send_notifications",
+      "manage_system",
+      "full_access"
+    ],
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  }
+]

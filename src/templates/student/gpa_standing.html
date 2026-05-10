@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Standing - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Columbus State University</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.student_dashboard') }}">
+                    <span class="icon">&gt;</span> Dashboard
+                </a>
+                <a href="{{ url_for('system.degree_progress') }}">
+                    <span class="icon">&gt;</span> Degree Progress
+                </a>
+                <a href="{{ url_for('system.remaining_courses') }}">
+                    <span class="icon">&gt;</span> Remaining Courses
+                </a>
+                <a href="{{ url_for('system.gpa_standing') }}" class="active">
+                    <span class="icon">&gt;</span> GPA Standing
+                </a>
+                <a href="{{ url_for('system.profile') }}">
+                    <span class="icon">&gt;</span> Profile
+                </a>
+            </nav>
+            <a href="{{ url_for('system.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <div>
+                    <h1>GPA & Academic Standing</h1>
+                    <p>Review your current academic performance</p>
+                </div>
+            </div>
+
+            <div class="info-box" style="background: linear-gradient(135deg, var(--csu-blue) 0%, var(--csu-light-blue) 100%); color: white; text-align: center; padding: 50px;">
+                <div style="font-size: 72px; font-weight: 700;">{{ gpa | round(2) }}</div>
+                <div style="font-size: 18px; opacity: 0.9; margin-top: 10px;">Cumulative GPA</div>
+                <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 12px 30px; border-radius: 25px; margin-top: 20px; font-weight: 600;">
+                    {% if gpa >= 3.5 %}
+                        Dean's List
+                    {% elif gpa >= 2.0 %}
+                        Good Standing
+                    {% else %}
+                        Academic Warning
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card {% if gpa >= 2.0 %}success{% else %}warning{% endif %}">
+                    <h3>Academic Standing</h3>
+                    <div class="stat-value" style="font-size: 20px;">
+                        {% if gpa >= 2.0 %}Good Standing{% else %}Warning{% endif %}
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Good Standing</h3>
+                    <div class="stat-value">= 2.0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Dean's List</h3>
+                    <div class="stat-value">= 3.5</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="section-title">GPA Scale</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>A</label>
+                        <span style="color: var(--status-good-text); font-weight: 700;">4.0</span>
+                    </div>
+                    <div class="info-item">
+                        <label>B</label>
+                        <span style="color: var(--csu-blue); font-weight: 700;">3.0</span>
+                    </div>
+                    <div class="info-item">
+                        <label>C</label>
+                        <span style="color: var(--status-warning-text); font-weight: 700;">2.0</span>
+                    </div>
+                    <div class="info-item">
+                        <label>D</label>
+                        <span style="color: var(--status-error-text); font-weight: 700;">1.0</span>
+                    </div>
+                    <div class="info-item">
+                        <label>F</label>
+                        <span style="color: var(--status-error-text); font-weight: 700;">0.0</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

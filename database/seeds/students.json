@@ -1,0 +1,981 @@
+[
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439011"
+    },
+    "studentId": "920001234",
+    "email": "john.doe@students.columbusstate.edu",
+    "password": "$2b$12$m6R/F9IoEhTggHUMACXGNeNqnIyR4Aq.hADOJqJkIePQ3bEphigka",
+    "personalInfo": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "dateOfBirth": "2002-03-15",
+      "phoneNumber": "706-555-0100",
+      "address": {
+        "street": "4225 University Ave",
+        "city": "Columbus",
+        "state": "GA",
+        "zip": "31907"
+      }
+    },
+    "academicInfo": {
+      "major": "Computer Science",
+      "track": "Software Systems",
+      "minor": "Mathematics",
+      "classification": "Junior",
+      "gpa": 3.45,
+      "totalCredits": 72,
+      "catalogYear": "2022",
+      "advisor": "ADV001",
+      "completedCourses": [
+        {
+          "courseCode": "CPSC1301K",
+          "courseName": "Computer Science I",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "CPSC1302K",
+          "courseName": "Computer Science II",
+          "grade": "A-",
+          "credits": 4,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "CPSC2105",
+          "courseName": "Computer Organization",
+          "grade": "B+",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "CPSC2108",
+          "courseName": "Data Structures",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "CPSC3125",
+          "courseName": "Operating Systems",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "CPSC3131",
+          "courseName": "Database Systems I",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "CYBR2159",
+          "courseName": "Fundamentals of Computer Networks",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "CYBR2160",
+          "courseName": "Intro to Information Security",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "MATH2125",
+          "courseName": "Introduction to Discrete Mathematics",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "ENGL1101",
+          "courseName": "English Composition I",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "ENGL1102",
+          "courseName": "English Composition II",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "MATH1113",
+          "courseName": "Pre-Calculus",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "STAT1401",
+          "courseName": "Elementary Statistics",
+          "grade": "B+",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "HIST2111",
+          "courseName": "US History to 1865",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "POLS1101",
+          "courseName": "American Government",
+          "grade": "B",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "BIOL1215K",
+          "courseName": "Introductory Biology",
+          "grade": "B+",
+          "credits": 4,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "ARTH1100",
+          "courseName": "Art Appreciation",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "PHIL2010",
+          "courseName": "Introduction to Philosophy",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "PERS1506",
+          "courseName": "Perspectives",
+          "grade": "S",
+          "credits": 1,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "RIVR1101",
+          "courseName": "Taking the Plunge",
+          "grade": "S",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "RIVR2101",
+          "courseName": "Navigating Deeper Waters",
+          "grade": "S",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "CPSC4175",
+          "courseName": "Software Engineering",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        }
+      ],
+      "currentCourses": [
+        {
+          "courseCode": "CPSC3125",
+          "courseName": "Operating Systems",
+          "credits": 3
+        },
+        {
+          "courseCode": "CPSC3131",
+          "courseName": "Database Systems I",
+          "credits": 3
+        },
+        {
+          "courseCode": "CPSC4175",
+          "courseName": "Software Engineering",
+          "credits": 3
+        }
+      ]
+    },
+    "createdAt": {
+      "$date": "2024-08-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-10T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439012"
+    },
+    "studentId": "920005678",
+    "email": "jane.smith@students.columbusstate.edu",
+    "password": "$2b$12$m6R/F9IoEhTggHUMACXGNeNqnIyR4Aq.hADOJqJkIePQ3bEphigka",
+    "personalInfo": {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "dateOfBirth": "2001-07-22",
+      "phoneNumber": "706-555-0200",
+      "address": {
+        "street": "8000 Main St Apt 4B",
+        "city": "Columbus",
+        "state": "GA",
+        "zip": "31904"
+      }
+    },
+    "academicInfo": {
+      "major": "Management Information Systems",
+      "minor": "",
+      "classification": "Senior",
+      "gpa": 3.78,
+      "totalCredits": 102,
+      "catalogYear": "2021",
+      "advisor": "ADV001",
+      "completedCourses": [
+        {
+          "courseCode": "ENGL1101",
+          "courseName": "English Composition I",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "ENGL1102",
+          "courseName": "English Composition II",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "COMM1110",
+          "courseName": "Public Speaking",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "MATH1111",
+          "courseName": "College Algebra",
+          "grade": "B+",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "MATH1401",
+          "courseName": "Elementary Statistics",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "ECON2105",
+          "courseName": "Principles of Macroeconomics",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "ECON2106",
+          "courseName": "Principles of Microeconomics",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "ACCT2101",
+          "courseName": "Principles of Accounting I",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "ACCT2102",
+          "courseName": "Principles of Accounting II",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "BUSN1000",
+          "courseName": "Introduction to Business",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "MGMT3000",
+          "courseName": "Management Principles",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "MKTG3000",
+          "courseName": "Marketing Principles",
+          "grade": "B+",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "FINC3000",
+          "courseName": "Corporate Finance",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "BUSL3000",
+          "courseName": "Business Law",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "ISYS3000",
+          "courseName": "Management Information Systems",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "ISYS3100",
+          "courseName": "Database Management Systems",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "ISYS3200",
+          "courseName": "Systems Analysis and Design",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "ISYS3300",
+          "courseName": "Business Data Communications",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "ISYS4100",
+          "courseName": "Enterprise Systems",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "ISYS4200",
+          "courseName": "IT Project Management",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "BUSN4000",
+          "courseName": "Business Strategy",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        }
+      ],
+      "currentCourses": [
+        {
+          "courseCode": "ISYS4100",
+          "courseName": "Enterprise Systems",
+          "credits": 3
+        },
+        {
+          "courseCode": "ISYS4200",
+          "courseName": "IT Project Management",
+          "credits": 3
+        },
+        {
+          "courseCode": "BUSN4000",
+          "courseName": "Business Strategy",
+          "credits": 3
+        }
+      ]
+    },
+    "createdAt": {
+      "$date": "2024-08-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-10T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439013"
+    },
+    "studentId": "920009876",
+    "email": "mike.johnson@students.columbusstate.edu",
+    "password": "$2b$12$m6R/F9IoEhTggHUMACXGNeNqnIyR4Aq.hADOJqJkIePQ3bEphigka",
+    "personalInfo": {
+      "firstName": "Michael",
+      "lastName": "Johnson",
+      "dateOfBirth": "2003-11-08",
+      "phoneNumber": "706-555-0300",
+      "address": {
+        "street": "123 Student Way",
+        "city": "Columbus",
+        "state": "GA",
+        "zip": "31907"
+      }
+    },
+    "academicInfo": {
+      "major": "Information Technology",
+      "minor": "",
+      "classification": "Sophomore",
+      "gpa": 2.85,
+      "totalCredits": 45,
+      "catalogYear": "2023",
+      "advisor": "ADV001",
+      "completedCourses": [
+        {
+          "courseCode": "CPSC1301K",
+          "courseName": "Computer Science I",
+          "grade": "B",
+          "credits": 4,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "CPSC1302K",
+          "courseName": "Computer Science II",
+          "grade": "C+",
+          "credits": 4,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "MATH1113",
+          "courseName": "Pre-Calculus",
+          "grade": "B-",
+          "credits": 4,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "ENGL1101",
+          "courseName": "English Composition I",
+          "grade": "B",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "ENGL1102",
+          "courseName": "English Composition II",
+          "grade": "B+",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "HIST2111",
+          "courseName": "US History to 1865",
+          "grade": "C",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "POLS1101",
+          "courseName": "American Government",
+          "grade": "B",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "PERS1506",
+          "courseName": "Perspectives",
+          "grade": "S",
+          "credits": 1,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "RIVR1101",
+          "courseName": "Taking the Plunge",
+          "grade": "S",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "RIVR2101",
+          "courseName": "Navigating Deeper Waters",
+          "grade": "S",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "CYBR2159",
+          "courseName": "Fundamentals of Computer Networks",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "CYBR2160",
+          "courseName": "Intro to Information Security",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        }
+      ],
+      "currentCourses": [
+        {
+          "courseCode": "CYBR2159",
+          "courseName": "Fundamentals of Computer Networks",
+          "credits": 3
+        },
+        {
+          "courseCode": "CYBR2160",
+          "courseName": "Intro to Information Security",
+          "credits": 3
+        },
+        {
+          "courseCode": "BUSA2100",
+          "courseName": "Introduction to Information Systems in Business",
+          "credits": 3
+        }
+      ]
+    },
+    "createdAt": {
+      "$date": "2024-08-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-10T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439014"
+    },
+    "studentId": "920003456",
+    "email": "sarah.williams@students.columbusstate.edu",
+    "password": "$2b$12$m6R/F9IoEhTggHUMACXGNeNqnIyR4Aq.hADOJqJkIePQ3bEphigka",
+    "personalInfo": {
+      "firstName": "Sarah",
+      "lastName": "Williams",
+      "dateOfBirth": "2002-05-30",
+      "phoneNumber": "706-555-0400",
+      "address": {
+        "street": "456 Campus Circle",
+        "city": "Columbus",
+        "state": "GA",
+        "zip": "31907"
+      }
+    },
+    "academicInfo": {
+      "major": "Cybersecurity",
+      "minor": "",
+      "classification": "Junior",
+      "gpa": 3.92,
+      "totalCredits": 78,
+      "catalogYear": "2022",
+      "advisor": "ADV003",
+      "completedCourses": [
+        {
+          "courseCode": "CPSC1301K",
+          "courseName": "Computer Science I",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "CPSC1302K",
+          "courseName": "Computer Science II",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "CPSC2105",
+          "courseName": "Computer Organization",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "CPSC2108",
+          "courseName": "Data Structures",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "CPSC3125",
+          "courseName": "Operating Systems",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "CPSC3131",
+          "courseName": "Database Systems I",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "CPSC3165",
+          "courseName": "Professionalism in Computing",
+          "grade": "A",
+          "credits": 2,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "CYBR2159",
+          "courseName": "Fundamentals of Computer Networks",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "CYBR2160",
+          "courseName": "Intro to Information Security",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "CYBR3106",
+          "courseName": "Cybersecurity Risk Management",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "CYBR3108",
+          "courseName": "Defensive Programming",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "MATH2125",
+          "courseName": "Introduction to Discrete Mathematics",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "ENGL1101",
+          "courseName": "English Composition I",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "ENGL1102",
+          "courseName": "English Composition II",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "MATH1113",
+          "courseName": "Pre-Calculus",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "STAT1401",
+          "courseName": "Elementary Statistics",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "HIST2111",
+          "courseName": "US History to 1865",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "POLS1101",
+          "courseName": "American Government",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2023"
+        }
+      ],
+      "currentCourses": [
+        {
+          "courseCode": "CYBR3106",
+          "courseName": "Cybersecurity Risk Management",
+          "credits": 3
+        },
+        {
+          "courseCode": "CYBR3108",
+          "courseName": "Defensive Programming",
+          "credits": 3
+        },
+        {
+          "courseCode": "CPSC4157",
+          "courseName": "Computer Networks",
+          "credits": 3
+        }
+      ]
+    },
+    "createdAt": {
+      "$date": "2024-08-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-10T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439015"
+    },
+    "studentId": "920007890",
+    "email": "david.brown@students.columbusstate.edu",
+    "password": "$2b$12$m6R/F9IoEhTggHUMACXGNeNqnIyR4Aq.hADOJqJkIePQ3bEphigka",
+    "personalInfo": {
+      "firstName": "David",
+      "lastName": "Brown",
+      "dateOfBirth": "2000-09-12",
+      "phoneNumber": "706-555-0500",
+      "address": {
+        "street": "789 Graduate Way Apt 2",
+        "city": "Columbus",
+        "state": "GA",
+        "zip": "31907"
+      }
+    },
+    "academicInfo": {
+      "major": "Computer Science",
+      "track": "Software Systems",
+      "minor": "Data Science",
+      "classification": "Senior",
+      "gpa": 3.65,
+      "totalCredits": 108,
+      "catalogYear": "2021",
+      "advisor": "ADV002",
+      "completedCourses": [
+        {
+          "courseCode": "CPSC1301K",
+          "courseName": "Computer Science I",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "CPSC1302K",
+          "courseName": "Computer Science II",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "CPSC2105",
+          "courseName": "Computer Organization",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "CPSC2108",
+          "courseName": "Data Structures",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "CPSC3125",
+          "courseName": "Operating Systems",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "CPSC3131",
+          "courseName": "Database Systems I",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "CPSC3165",
+          "courseName": "Professionalism in Computing",
+          "grade": "A",
+          "credits": 2,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "CPSC3175",
+          "courseName": "Object-Oriented Design",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2024"
+        },
+        {
+          "courseCode": "CPSC4115",
+          "courseName": "Algorithms",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "CPSC4155",
+          "courseName": "Computer Architecture",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "CPSC4175",
+          "courseName": "Software Engineering",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "CPSC4176",
+          "courseName": "Senior Software Engineering Project",
+          "grade": "IP",
+          "credits": 3,
+          "semester": "Spring 2025"
+        },
+        {
+          "courseCode": "CYBR2159",
+          "courseName": "Fundamentals of Computer Networks",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "CYBR2160",
+          "courseName": "Intro to Information Security",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "MATH2125",
+          "courseName": "Introduction to Discrete Mathematics",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "MATH5125U",
+          "courseName": "Discrete Mathematics",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2024"
+        },
+        {
+          "courseCode": "ENGL1101",
+          "courseName": "English Composition I",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "ENGL1102",
+          "courseName": "English Composition II",
+          "grade": "B+",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "MATH1113",
+          "courseName": "Pre-Calculus",
+          "grade": "A",
+          "credits": 4,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "STAT1401",
+          "courseName": "Elementary Statistics",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "HIST2111",
+          "courseName": "US History to 1865",
+          "grade": "B+",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "POLS1101",
+          "courseName": "American Government",
+          "grade": "B",
+          "credits": 3,
+          "semester": "Spring 2022"
+        },
+        {
+          "courseCode": "BIOL1215K",
+          "courseName": "Introductory Biology",
+          "grade": "B+",
+          "credits": 4,
+          "semester": "Fall 2023"
+        },
+        {
+          "courseCode": "ARTH1100",
+          "courseName": "Art Appreciation",
+          "grade": "A",
+          "credits": 3,
+          "semester": "Spring 2023"
+        },
+        {
+          "courseCode": "PHIL2010",
+          "courseName": "Introduction to Philosophy",
+          "grade": "A-",
+          "credits": 3,
+          "semester": "Fall 2022"
+        },
+        {
+          "courseCode": "PERS1506",
+          "courseName": "Perspectives",
+          "grade": "S",
+          "credits": 1,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "RIVR1101",
+          "courseName": "Taking the Plunge",
+          "grade": "S",
+          "credits": 3,
+          "semester": "Fall 2021"
+        },
+        {
+          "courseCode": "RIVR2101",
+          "courseName": "Navigating Deeper Waters",
+          "grade": "S",
+          "credits": 3,
+          "semester": "Spring 2022"
+        }
+      ],
+      "currentCourses": [
+        {
+          "courseCode": "CPSC4175",
+          "courseName": "Software Engineering",
+          "credits": 3
+        },
+        {
+          "courseCode": "CPSC4176",
+          "courseName": "Senior Software Engineering Project",
+          "credits": 3
+        },
+        {
+          "courseCode": "CPSC4157",
+          "courseName": "Computer Networks",
+          "credits": 3
+        }
+      ]
+    },
+    "createdAt": {
+      "$date": "2024-08-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-07T00:22:20.724Z"
+    }
+  }
+]

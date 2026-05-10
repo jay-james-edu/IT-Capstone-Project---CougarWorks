@@ -1,0 +1,862 @@
+[
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439301"
+    },
+    "major": "Computer Science",
+    "track": "Software Systems",
+    "degree": "Bachelor of Science",
+    "catalogYear": "2024",
+    "totalCreditsRequired": 120,
+    "minGPA": 2,
+    "categories": [
+      {
+        "name": "Core IMPACTS",
+        "creditsRequired": 42,
+        "courses": [
+          {
+            "courseCode": "PERS1506",
+            "courseName": "Perspectives",
+            "credits": 1
+          },
+          {
+            "courseCode": "RIVR1101",
+            "courseName": "Taking the Plunge",
+            "credits": 3
+          },
+          {
+            "courseCode": "RIVR2101",
+            "courseName": "Navigating Deeper Waters",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL1101",
+            "courseName": "English Composition I",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL1102",
+            "courseName": "English Composition II",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH1113",
+            "courseName": "Pre-Calculus",
+            "credits": 4,
+            "notes": "Or higher math"
+          },
+          {
+            "courseCode": "STAT1401",
+            "courseName": "Elementary Statistics",
+            "credits": 3
+          },
+          {
+            "courseCode": "HIST2111",
+            "courseName": "US History to 1865",
+            "credits": 3,
+            "alternativeCourses": [
+              "HIST2112"
+            ]
+          },
+          {
+            "courseCode": "POLS1101",
+            "courseName": "American Government",
+            "credits": 3
+          },
+          {
+            "courseCode": "ARTH1100",
+            "courseName": "Art Appreciation",
+            "credits": 3,
+            "notes": "Or approved Fine Arts course"
+          },
+          {
+            "courseCode": "PHIL2010",
+            "courseName": "Introduction to Philosophy",
+            "credits": 3,
+            "notes": "Or approved Humanities course"
+          },
+          {
+            "courseCode": "BIOL1215K",
+            "courseName": "Introductory Biology",
+            "credits": 4,
+            "notes": "Lab science required"
+          }
+        ]
+      },
+      {
+        "name": "Field of Study Requirements",
+        "creditsRequired": 18,
+        "notes": "Minimum grade of C required in each course",
+        "courses": [
+          {
+            "courseCode": "CPSC1301K",
+            "courseName": "Computer Science I",
+            "credits": 4
+          },
+          {
+            "courseCode": "CPSC1302K",
+            "courseName": "Computer Science II",
+            "credits": 4
+          },
+          {
+            "courseCode": "CPSC2105",
+            "courseName": "Computer Organization",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR2159",
+            "courseName": "Fundamentals of Computer Networks",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR2160",
+            "courseName": "Intro to Information Security",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH2125",
+            "courseName": "Introduction to Discrete Mathematics",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Required for the Major",
+        "creditsRequired": 20,
+        "notes": "Minimum grade of C required in each CPSC course",
+        "courses": [
+          {
+            "courseCode": "CPSC2108",
+            "courseName": "Data Structures",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3125",
+            "courseName": "Operating Systems",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3131",
+            "courseName": "Database Systems I",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3165",
+            "courseName": "Professionalism in Computing",
+            "credits": 2
+          },
+          {
+            "courseCode": "CPSC3175",
+            "courseName": "Object-Oriented Design",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4000",
+            "courseName": "Baccalaureate Survey",
+            "credits": 0
+          },
+          {
+            "courseCode": "MATH5125U",
+            "courseName": "Discrete Mathematics",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Major Electives",
+        "creditsRequired": 30,
+        "notes": "Minimum grade of C required. Select 12 credits from CPSC/CYBR 3000 level or above.",
+        "courses": [
+          {
+            "courseCode": "CPSC4115",
+            "courseName": "Algorithms",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4148",
+            "courseName": "Theory of Computation",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4155",
+            "courseName": "Computer Architecture",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4157",
+            "courseName": "Computer Networks",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4175",
+            "courseName": "Software Engineering",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4176",
+            "courseName": "Senior Software Engineering Project",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "General Electives",
+        "creditsRequired": 10,
+        "courses": [],
+        "notes": "Select 10 credits of General Electives"
+      }
+    ],
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439302"
+    },
+    "major": "Information Technology",
+    "degree": "Bachelor of Science",
+    "catalogYear": "2024",
+    "totalCreditsRequired": 120,
+    "minGPA": 2,
+    "categories": [
+      {
+        "name": "Core IMPACTS",
+        "creditsRequired": 42,
+        "courses": [
+          {
+            "courseCode": "PERS1506",
+            "courseName": "Perspectives",
+            "credits": 1
+          },
+          {
+            "courseCode": "RIVR1101",
+            "courseName": "Taking the Plunge",
+            "credits": 3
+          },
+          {
+            "courseCode": "RIVR2101",
+            "courseName": "Navigating Deeper Waters",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL1101",
+            "courseName": "English Composition I",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL1102",
+            "courseName": "English Composition II",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH1113",
+            "courseName": "Pre-Calculus",
+            "credits": 4
+          },
+          {
+            "courseCode": "HIST2111",
+            "courseName": "US History to 1865",
+            "credits": 3,
+            "alternativeCourses": [
+              "HIST2112"
+            ]
+          },
+          {
+            "courseCode": "POLS1101",
+            "courseName": "American Government",
+            "credits": 3
+          },
+          {
+            "courseCode": "ARTH1100",
+            "courseName": "Art Appreciation",
+            "credits": 3,
+            "notes": "Or approved Fine Arts course"
+          },
+          {
+            "courseCode": "PHIL2010",
+            "courseName": "Introduction to Philosophy",
+            "credits": 3,
+            "notes": "Or approved Humanities course"
+          },
+          {
+            "courseCode": "BIOL1215K",
+            "courseName": "Introductory Biology",
+            "credits": 4,
+            "notes": "Lab science required"
+          }
+        ]
+      },
+      {
+        "name": "Field of Study Requirements",
+        "creditsRequired": 18,
+        "notes": "Minimum grade of C required in each CPSC and CYBR course",
+        "courses": [
+          {
+            "courseCode": "CPSC1301K",
+            "courseName": "Computer Science I",
+            "credits": 4
+          },
+          {
+            "courseCode": "CPSC1302K",
+            "courseName": "Computer Science II",
+            "credits": 4
+          },
+          {
+            "courseCode": "CYBR2159",
+            "courseName": "Fundamentals of Computer Networks",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR2160",
+            "courseName": "Intro to Information Security",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH1113",
+            "courseName": "Pre-Calculus",
+            "credits": 4
+          }
+        ]
+      },
+      {
+        "name": "Required for the Major",
+        "creditsRequired": 35,
+        "notes": "Minimum grade of C required in each BUSA, CPSC and MISM course",
+        "courses": [
+          {
+            "courseCode": "BUSA2100",
+            "courseName": "Introduction to Information Systems in Business",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC2105",
+            "courseName": "Computer Organization",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3118",
+            "courseName": "Introduction to Human-Computer Interaction",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3131",
+            "courseName": "Database Systems I",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3165",
+            "courseName": "Professionalism in Computing",
+            "credits": 2
+          },
+          {
+            "courseCode": "CPSC3415",
+            "courseName": "Information Technology Practicum",
+            "credits": 3,
+            "notes": "Take 3 times in different areas, or CPSC4698 Internship"
+          },
+          {
+            "courseCode": "CPSC4205",
+            "courseName": "IT Senior Capstone",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4000",
+            "courseName": "Baccalaureate Survey",
+            "credits": 0
+          },
+          {
+            "courseCode": "MATH2125",
+            "courseName": "Introduction to Discrete Mathematics",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL5195U",
+            "courseName": "Technical and Scientific Writing",
+            "credits": 3
+          },
+          {
+            "courseCode": "MISM3115",
+            "courseName": "Principles of Information Systems Management",
+            "credits": 3
+          },
+          {
+            "courseCode": "MISM4165",
+            "courseName": "Project Management",
+            "credits": 3
+          },
+          {
+            "courseCode": "MISM4168",
+            "courseName": "Systems Analysis & Design",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Major Electives",
+        "creditsRequired": 15,
+        "courses": [],
+        "notes": "Select 15 credits from CPSC/CYBR/MISM/FTA/CYNX at 3000 level or above"
+      },
+      {
+        "name": "General Electives",
+        "creditsRequired": 10,
+        "courses": [],
+        "notes": "Select 10 credits of General Electives"
+      }
+    ],
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439303"
+    },
+    "major": "Cybersecurity",
+    "degree": "Bachelor of Science",
+    "catalogYear": "2024",
+    "totalCreditsRequired": 120,
+    "minGPA": 2,
+    "categories": [
+      {
+        "name": "Core IMPACTS",
+        "creditsRequired": 42,
+        "courses": [
+          {
+            "courseCode": "PERS1506",
+            "courseName": "Perspectives",
+            "credits": 1
+          },
+          {
+            "courseCode": "RIVR1101",
+            "courseName": "Taking the Plunge",
+            "credits": 3
+          },
+          {
+            "courseCode": "RIVR2101",
+            "courseName": "Navigating Deeper Waters",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL1101",
+            "courseName": "English Composition I",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL1102",
+            "courseName": "English Composition II",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH1113",
+            "courseName": "Pre-Calculus",
+            "credits": 4,
+            "notes": "Or higher"
+          },
+          {
+            "courseCode": "STAT1401",
+            "courseName": "Elementary Statistics",
+            "credits": 3
+          },
+          {
+            "courseCode": "HIST2111",
+            "courseName": "US History to 1865",
+            "credits": 3,
+            "alternativeCourses": [
+              "HIST2112"
+            ]
+          },
+          {
+            "courseCode": "POLS1101",
+            "courseName": "American Government",
+            "credits": 3
+          },
+          {
+            "courseCode": "ARTH1100",
+            "courseName": "Art Appreciation",
+            "credits": 3,
+            "notes": "Or approved Fine Arts course"
+          },
+          {
+            "courseCode": "PHIL2010",
+            "courseName": "Introduction to Philosophy",
+            "credits": 3,
+            "notes": "Or approved Humanities course"
+          },
+          {
+            "courseCode": "BIOL1215K",
+            "courseName": "Introductory Biology",
+            "credits": 4,
+            "notes": "Lab science required"
+          }
+        ]
+      },
+      {
+        "name": "Field of Study Requirements",
+        "creditsRequired": 18,
+        "notes": "Minimum grade of C required in each course",
+        "courses": [
+          {
+            "courseCode": "CPSC1301K",
+            "courseName": "Computer Science I",
+            "credits": 4
+          },
+          {
+            "courseCode": "CPSC1302K",
+            "courseName": "Computer Science II",
+            "credits": 4
+          },
+          {
+            "courseCode": "CPSC2105",
+            "courseName": "Computer Organization",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR2159",
+            "courseName": "Fundamentals of Computer Networks",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR2160",
+            "courseName": "Intro to Information Security",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH2125",
+            "courseName": "Introduction to Discrete Mathematics",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Required for the Major",
+        "creditsRequired": 27,
+        "notes": "Minimum grade of C required in each CPSC and CYBR course",
+        "courses": [
+          {
+            "courseCode": "CPSC2108",
+            "courseName": "Data Structures",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3125",
+            "courseName": "Operating Systems",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC3165",
+            "courseName": "Professionalism in Computing",
+            "credits": 2
+          },
+          {
+            "courseCode": "CPSC4157",
+            "courseName": "Computer Networks",
+            "credits": 3
+          },
+          {
+            "courseCode": "CPSC4000",
+            "courseName": "Baccalaureate Survey",
+            "credits": 0
+          },
+          {
+            "courseCode": "CYBR3106",
+            "courseName": "Cybersecurity Risk Management",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR3108",
+            "courseName": "Defensive Programming",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR3119",
+            "courseName": "Fundamentals of Digital Forensics",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR3136",
+            "courseName": "Wireless, IoT and Mobile Security",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR4416",
+            "courseName": "Cybersecurity Practicum",
+            "credits": 1
+          }
+        ]
+      },
+      {
+        "name": "Major Electives",
+        "creditsRequired": 24,
+        "notes": "Minimum grade of C required. Five required courses plus 9 credits from CPSC/CYBR/FTA 3000+.",
+        "courses": [
+          {
+            "courseCode": "CPSC3131",
+            "courseName": "Database Systems I",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR4127",
+            "courseName": "Computer and Network Security",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR4128",
+            "courseName": "Penetration Testing and Countermeasures",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR4160",
+            "courseName": "Applied Cryptography",
+            "credits": 3
+          },
+          {
+            "courseCode": "CYBR4166",
+            "courseName": "Intrusion Detection and Prevention",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "General Electives",
+        "creditsRequired": 9,
+        "courses": [],
+        "notes": "Select 9 credits of General Electives"
+      }
+    ],
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439304"
+    },
+    "major": "Management Information Systems",
+    "degree": "Bachelor of Business Administration",
+    "catalogYear": "2024",
+    "totalCreditsRequired": 120,
+    "minGPA": 2,
+    "categories": [
+      {
+        "name": "Core IMPACTS (Areas A-E)",
+        "creditsRequired": 42,
+        "courses": [
+          {
+            "courseCode": "ENGL1101",
+            "courseName": "English Composition I",
+            "credits": 3
+          },
+          {
+            "courseCode": "ENGL1102",
+            "courseName": "English Composition II",
+            "credits": 3
+          },
+          {
+            "courseCode": "COMM1110",
+            "courseName": "Public Speaking",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH1111",
+            "courseName": "College Algebra",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH1401",
+            "courseName": "Elementary Statistics",
+            "credits": 3
+          },
+          {
+            "courseCode": "HIST2111",
+            "courseName": "US History to 1865",
+            "credits": 3
+          },
+          {
+            "courseCode": "HIST2112",
+            "courseName": "US History since 1865",
+            "credits": 3
+          },
+          {
+            "courseCode": "POLS1101",
+            "courseName": "American Government",
+            "credits": 3
+          },
+          {
+            "courseCode": "ARTH1100",
+            "courseName": "Art Appreciation",
+            "credits": 3
+          },
+          {
+            "courseCode": "PHIL2010",
+            "courseName": "Introduction to Philosophy",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Business Core (Area G)",
+        "creditsRequired": 27,
+        "notes": "C average required",
+        "courses": [
+          {
+            "courseCode": "ECON2105",
+            "courseName": "Principles of Macroeconomics",
+            "credits": 3
+          },
+          {
+            "courseCode": "ECON2106",
+            "courseName": "Principles of Microeconomics",
+            "credits": 3
+          },
+          {
+            "courseCode": "ACCT2101",
+            "courseName": "Principles of Accounting I",
+            "credits": 3
+          },
+          {
+            "courseCode": "ACCT2102",
+            "courseName": "Principles of Accounting II",
+            "credits": 3
+          },
+          {
+            "courseCode": "BUSN1000",
+            "courseName": "Introduction to Business",
+            "credits": 3
+          },
+          {
+            "courseCode": "MGMT3000",
+            "courseName": "Management Principles",
+            "credits": 3
+          },
+          {
+            "courseCode": "MKTG3000",
+            "courseName": "Marketing Principles",
+            "credits": 3
+          },
+          {
+            "courseCode": "FINC3000",
+            "courseName": "Corporate Finance",
+            "credits": 3
+          },
+          {
+            "courseCode": "BUSL3000",
+            "courseName": "Business Law",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "MIS Major Requirements (Area H)",
+        "creditsRequired": 24,
+        "notes": "C or better required in each course",
+        "courses": [
+          {
+            "courseCode": "ISYS3000",
+            "courseName": "Management Information Systems",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS3100",
+            "courseName": "Database Management Systems",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS3200",
+            "courseName": "Systems Analysis and Design",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS3300",
+            "courseName": "Business Data Communications",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS3400",
+            "courseName": "Business Application Programming",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS3500",
+            "courseName": "Web Development for Business",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS4100",
+            "courseName": "Enterprise Systems",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS4200",
+            "courseName": "IT Project Management",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Business Electives (Area I)",
+        "creditsRequired": 12,
+        "notes": "C average required. Select from approved business electives.",
+        "courses": [
+          {
+            "courseCode": "MGMT3500",
+            "courseName": "Organizational Behavior",
+            "credits": 3
+          },
+          {
+            "courseCode": "MGMT4000",
+            "courseName": "Human Resource Management",
+            "credits": 3
+          },
+          {
+            "courseCode": "MGMT4500",
+            "courseName": "Operations Management",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS4300",
+            "courseName": "Business Analytics",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS4400",
+            "courseName": "Information Security Management",
+            "credits": 3
+          },
+          {
+            "courseCode": "ISYS4500",
+            "courseName": "E-Commerce Strategy",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "name": "Capstone",
+        "creditsRequired": 3,
+        "courses": [
+          {
+            "courseCode": "BUSN4000",
+            "courseName": "Business Strategy",
+            "credits": 3
+          }
+        ]
+      }
+    ],
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  }
+]

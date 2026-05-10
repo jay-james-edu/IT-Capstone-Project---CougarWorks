@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <main class="main-content" style="margin: 40px auto; max-width: 900px;">
+            <div class="info-box">
+                <h1>Something went wrong</h1>
+                <p>{{ error or 'The requested page could not be loaded.' }}</p>
+                <a href="{{ url_for('system.dashboard') if session.get('user_id') else url_for('auth.login') }}" class="btn-primary">Go Back</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

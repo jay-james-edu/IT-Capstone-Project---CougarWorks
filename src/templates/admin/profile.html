@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Profile - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Admin Portal</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.dashboard') }}">
+                    <span class="icon">&gt;</span> Dashboard
+                </a>
+                <a href="{{ url_for('system.admin_profile') }}" class="active">
+                    <span class="icon">&gt;</span> Profile
+                </a>
+            </nav>
+            <a href="{{ url_for('system.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>My Profile</h1>
+            </div>
+
+            <div class="info-box profile-header">
+                <div class="avatar">
+                    {{ admin.personalInfo.firstName[0] }}{{ admin.personalInfo.lastName[0] }}
+                </div>
+                <div class="profile-name">
+                    <div class="name">{{ admin.personalInfo.firstName }} {{ admin.personalInfo.lastName }}</div>
+                    <div class="email">{{ admin.email }}</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="section-title">Account Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Admin ID</label>
+                        <span>{{ admin.adminId }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>First Name</label>
+                        <span>{{ admin.personalInfo.firstName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Last Name</label>
+                        <span>{{ admin.personalInfo.lastName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <span>{{ admin.email }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Phone</label>
+                        <span>{{ admin.phone or admin.personalInfo.phone or 'N/A' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Role</label>
+                        <span>Administrator</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="section-title">System Access</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Access Level</label>
+                        <span>Full Administrative Access</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Permissions</label>
+                        <span>Manage Students, Advisors, System Settings</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="{{ url_for('system.dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+[
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439101"
+    },
+    "advisorId": "ADV001",
+    "email": "robert.wilson@advisors.columbusstate.edu",
+    "password": "$2b$12$vby1EBiBZGuy.Krsqr9RrOTuFOoIxfzp8uJOSFl.Ls1CjyWawbgS6",
+    "personalInfo": {
+      "firstName": "Robert",
+      "lastName": "Wilson",
+      "phoneNumber": "706-507-8100",
+      "office": "CCT 450"
+    },
+    "department": "TSYS School of Computer Science",
+    "title": "Associate Professor",
+    "assignedStudents": [
+      "920001234",
+      "920009876",
+      "920007890"
+    ],
+    "specializations": [
+      "Computer Science",
+      "Information Technology",
+      "Software Engineering"
+    ],
+    "officeHours": {
+      "monday": "2:00 PM - 4:00 PM",
+      "wednesday": "10:00 AM - 12:00 PM",
+      "friday": "1:00 PM - 3:00 PM"
+    },
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439102"
+    },
+    "advisorId": "ADV002",
+    "email": "maria.garcia@advisors.columbusstate.edu",
+    "password": "$2b$12$vby1EBiBZGuy.Krsqr9RrOTuFOoIxfzp8uJOSFl.Ls1CjyWawbgS6",
+    "personalInfo": {
+      "firstName": "Maria",
+      "lastName": "Garcia",
+      "phoneNumber": "706-507-8200",
+      "office": "Business 310"
+    },
+    "department": "Turner College of Business",
+    "title": "Professor and Department Chair",
+    "assignedStudents": [
+      "920005678"
+    ],
+    "specializations": [
+      "Management Information Systems",
+      "Business Analytics",
+      "Database Management"
+    ],
+    "officeHours": {
+      "tuesday": "9:00 AM - 11:00 AM",
+      "thursday": "2:00 PM - 4:00 PM"
+    },
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "507f1f77bcf86cd799439103"
+    },
+    "advisorId": "ADV003",
+    "email": "james.chen@advisors.columbusstate.edu",
+    "password": "$2b$12$vby1EBiBZGuy.Krsqr9RrOTuFOoIxfzp8uJOSFl.Ls1CjyWawbgS6",
+    "personalInfo": {
+      "firstName": "James",
+      "lastName": "Chen",
+      "phoneNumber": "706-507-8300",
+      "office": "CCT 425"
+    },
+    "department": "TSYS School of Computer Science",
+    "title": "Associate Professor",
+    "assignedStudents": [
+      "920003456"
+    ],
+    "specializations": [
+      "Cybersecurity",
+      "Network Security",
+      "Digital Forensics"
+    ],
+    "officeHours": {
+      "monday": "1:00 PM - 3:00 PM",
+      "wednesday": "1:00 PM - 3:00 PM",
+      "friday": "9:00 AM - 11:00 AM"
+    },
+    "createdAt": {
+      "$date": "2024-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  }
+]

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advisor Profile - CougarWorks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>CougarWorks</h2>
+                <span>Advisor Portal</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('system.dashboard') }}">
+                    <span class="icon">&gt;</span> My Advisees
+                </a>
+                <a href="{{ url_for('system.advisor_profile') }}" class="active">
+                    <span class="icon">&gt;</span> Profile
+                </a>
+            </nav>
+            <a href="{{ url_for('system.logout') }}" class="logout-btn">
+                <span class="icon">X</span> Logout
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <div class="topbar">
+                <h1>My Profile</h1>
+            </div>
+
+            <div class="info-box profile-header">
+                <div class="avatar">
+                    {{ advisor.personalInfo.firstName[0] }}{{ advisor.personalInfo.lastName[0] }}
+                </div>
+                <div class="profile-name">
+                    <div class="name">{{ advisor.personalInfo.firstName }} {{ advisor.personalInfo.lastName }}</div>
+                    <div class="email">{{ advisor.email }}</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="section-title">Personal Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Advisor ID</label>
+                        <span>{{ advisor.advisorId }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>First Name</label>
+                        <span>{{ advisor.personalInfo.firstName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Last Name</label>
+                        <span>{{ advisor.personalInfo.lastName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <span>{{ advisor.email }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Phone</label>
+                        <span>{{ advisor.phone or 'N/A' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Role</label>
+                        <span>Academic Advisor</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="section-title">Advising Summary</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Total Advisees</label>
+                        <span>{{ advisee_count }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Department</label>
+                        <span>{{ advisor.department or 'Academic Advising' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Office</label>
+                        <span>{{ advisor.office or 'Main Campus' }}</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Office Hours</label>
+                        <span>{{ formatted_office_hours }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="{{ url_for('system.dashboard') }}" class="btn-secondary">Back to Advisees</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
